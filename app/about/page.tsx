@@ -24,7 +24,7 @@ export default function AboutUs() {
             <div className="w-full max-w-4xl mx-auto lg:mx-0">
               <div className="text-center lg:text-left px-2 sm:px-0">
                 {/* Mobile-optimized typography */}
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
+                <h1 className="text-4xl sm:text-5xl md:text-5xl font-semibold text-white mb-3 sm:mb-4 leading-tight [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
                   <span className="block">Secure Transactions, Simplified</span>
                   <span className="block text-2xl sm:text-3xl md:text-4xl font-medium mt-3 sm:mt-4 text-white [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
                     Revolutionizing digital escrow services
@@ -113,7 +113,7 @@ export default function AboutUs() {
           <div className="flex flex-col lg:flex-row gap-8 sm:gap-10 md:gap-12 items-center">
             {/* Image without container - just the frame */}
             <img
-              src="/team/whyy.png"
+              src="/whyy.png"
               alt="Why Choose Escrowpay"
               className="lg:w-1/2 w-full h-auto object-cover rounded-lg shadow-md border border-gray-200"
             />
