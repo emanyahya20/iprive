@@ -1,43 +1,61 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Menu, X } from "lucide-react"
-import { usePathname } from "next/navigation"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
+      setIsScrolled(window.scrollY > 10);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToConcierge = () => {
-    const conciergeSection = document.getElementById("concierge")
+    const conciergeSection = document.getElementById("concierge");
     if (conciergeSection) {
-      conciergeSection.scrollIntoView({ behavior: "smooth" })
+      conciergeSection.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMenuOpen(false)
-  }
+    setIsMenuOpen(false);
+  };
 
   // List of pages that should have transparent header by default
-  const transparentHeaderPages = ["/", "/about", "/media", "/team", "/contact", "/knowledge-center"]
+  const transparentHeaderPages = [
+    "/",
+    "/about",
+    "/media",
+    "/team",
+    "/contact",
+    "/knowledge-center",
+    "/trust",
+    "/trump",
+    "/startup",
+    "/private",
+    "/jumbo",
+    "/global",
+    "/citizenship",
+  ];
 
   // Check if current page should have transparent header
-  const shouldHaveTransparentHeader = transparentHeaderPages.includes(pathname)
+  const shouldHaveTransparentHeader = transparentHeaderPages.includes(pathname);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : shouldHaveTransparentHeader ? "bg-transparent" : "bg-white"
+        isScrolled
+          ? "bg-white shadow-md"
+          : shouldHaveTransparentHeader
+          ? "bg-transparent"
+          : "bg-white"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,11 +63,27 @@ export function Header() {
           {/* Logos with explicit margin */}
           <div className="flex items-center">
             <Link href="/">
-              <Image src="/footerlogo/ft01.png" alt="Logo" width={180} height={50} className="h-10 w-auto" />
+              <Image
+                src="/ft01.png"
+                alt="Logo"
+                width={180}
+                height={50}
+                className="h-10 w-auto"
+              />
             </Link>
             <div className="w-8"></div> {/* Explicit spacer element */}
-            <a href="http://iTrustmore.com" target="_blank" rel="noopener noreferrer">
-              <Image src="/footerlogo/ft2.png" alt="Trustmore Logo" width={180} height={50} className="h-10 w-auto" />
+            <a
+              href="http://iTrustmore.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/ft2.png"
+                alt="Trustmore Logo"
+                width={180}
+                height={50}
+                className="h-10 w-auto"
+              />
             </a>
           </div>
 
@@ -64,8 +98,8 @@ export function Header() {
                       ? "text-gray-900"
                       : "text-white"
                     : isScrolled
-                      ? "text-gray-700"
-                      : "text-white hover:text-white"
+                    ? "text-gray-700"
+                    : "text-white hover:text-white"
                 }`}
               >
                 Home
@@ -78,8 +112,8 @@ export function Header() {
                       ? "text-gray-900"
                       : "text-white"
                     : isScrolled
-                      ? "text-gray-700"
-                      : "text-white hover:text-white"
+                    ? "text-gray-700"
+                    : "text-white hover:text-white"
                 }`}
               >
                 About
@@ -92,8 +126,8 @@ export function Header() {
                       ? "text-gray-900"
                       : "text-white"
                     : isScrolled
-                      ? "text-gray-700"
-                      : "text-white hover:text-white"
+                    ? "text-gray-700"
+                    : "text-white hover:text-white"
                 }`}
               >
                 Team
@@ -106,8 +140,8 @@ export function Header() {
                       ? "text-gray-900"
                       : "text-white"
                     : isScrolled
-                      ? "text-gray-700"
-                      : "text-white hover:text-white"
+                    ? "text-gray-700"
+                    : "text-white hover:text-white"
                 }`}
               >
                 Media
@@ -120,8 +154,8 @@ export function Header() {
                       ? "text-gray-900"
                       : "text-white"
                     : isScrolled
-                      ? "text-gray-700"
-                      : "text-white hover:text-white"
+                    ? "text-gray-700"
+                    : "text-white hover:text-white"
                 }`}
               >
                 Knowledge Center
@@ -134,8 +168,8 @@ export function Header() {
                       ? "text-gray-900"
                       : "text-white"
                     : isScrolled
-                      ? "text-gray-700"
-                      : "text-white hover:text-white"
+                    ? "text-gray-700"
+                    : "text-white hover:text-white"
                 }`}
               >
                 Contact
@@ -147,7 +181,9 @@ export function Header() {
           <div className="hidden md:flex items-center space-x-3">
             <button
               className={`bg-transparent rounded-[8px] border-2 font-medium px-4 py-1.5 text-sm ${
-                isScrolled || !shouldHaveTransparentHeader ? "border-gray-800 text-gray-800" : "border-white text-white"
+                isScrolled || !shouldHaveTransparentHeader
+                  ? "border-gray-800 text-gray-800"
+                  : "border-white text-white"
               } hover:bg-transparent transition-colors`}
             >
               Client Login
@@ -155,7 +191,9 @@ export function Header() {
             <button
               onClick={scrollToConcierge}
               className={`bg-transparent rounded-[8px] border-2 font-medium px-4 py-1.5 text-sm ${
-                isScrolled || !shouldHaveTransparentHeader ? "border-gray-800 text-gray-800" : "border-white text-white"
+                isScrolled || !shouldHaveTransparentHeader
+                  ? "border-gray-800 text-gray-800"
+                  : "border-white text-white"
               } hover:bg-transparent transition-colors`}
             >
               Get Started
@@ -164,7 +202,11 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 ${isScrolled || !shouldHaveTransparentHeader ? "text-gray-900" : "text-white"}`}
+            className={`md:hidden p-2 ${
+              isScrolled || !shouldHaveTransparentHeader
+                ? "text-gray-900"
+                : "text-white"
+            }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -176,16 +218,32 @@ export function Header() {
       {isMenuOpen && (
         <div className="md:hidden py-4 bg-white shadow-md">
           <div className="container mx-auto px-4 flex flex-col space-y-3">
-            <Link href="/" className="text-lg font-semibold text-gray-900" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              href="/"
+              className="text-lg font-semibold text-gray-900"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Home
             </Link>
-            <Link href="/about" className="text-lg font-semibold text-gray-900" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              href="/about"
+              className="text-lg font-semibold text-gray-900"
+              onClick={() => setIsMenuOpen(false)}
+            >
               About
             </Link>
-            <Link href="/team" className="text-lg font-semibold text-gray-900" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              href="/team"
+              className="text-lg font-semibold text-gray-900"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Team
             </Link>
-            <Link href="/media" className="text-lg font-semibold text-gray-900" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              href="/media"
+              className="text-lg font-semibold text-gray-900"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Media
             </Link>
             <Link
@@ -195,7 +253,11 @@ export function Header() {
             >
               Knowledge Center
             </Link>
-            <Link href="/contact" className="text-lg font-semibold text-gray-900" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              href="/contact"
+              className="text-lg font-semibold text-gray-900"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Contact
             </Link>
             <div className="pt-4 space-y-3">
@@ -213,5 +275,5 @@ export function Header() {
         </div>
       )}
     </header>
-  )
+  );
 }

@@ -1,20 +1,25 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Check, ArrowRight } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/header";
+import { Check, ArrowRight, Play } from "lucide-react";
+import ServicesTabs from "@/components/services-tabs";
+import AdvisorPlatform from "@/components/advisor-platform";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-inter">
-      <Header />
-
       <main className="flex-grow">
         {/* Hero Section with Video Background */}
         <section className="relative h-screen md:h-[110vh] min-h-[500px] md:min-h-[700px] overflow-hidden">
           {/* Video Background */}
-          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
             <source src="/vid.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -23,35 +28,47 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/40"></div>
 
           {/* Content container */}
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl h-full flex items-center relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-10">
             <div className="w-full max-w-4xl mx-auto lg:mx-0">
               <div className="text-center lg:text-left px-4 sm:px-0">
                 {/* Main heading */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-                  <span className="block whitespace-normal">Welcome to iPrive</span>
+                  <span className="block whitespace-normal">
+                    Welcome to IPRIVE Global Private Wealth
+                  </span>
                   <span className="block text-2xl sm:text-3xl md:text-4xl font-medium mt-3 sm:mt-4 text-white [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-                    India's First & Largest Digital Escrow
-                    <br />
-                    Technology Services Provider
+                    Where Global Wealth Meets Timeless Trust
                   </span>
                 </h1>
 
                 {/* Description text */}
                 <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed [text-shadow:_0_1px_2px_rgba(0,0,0,0.4)]">
-                  We pioneered and built a transformative change in the way businesses manage and secure their
-                  collection transactions.
+                  At IPRIVE, we believe that wealth is more than just capital,
+                  it’s legacy, influence, and vision. As the private wealth arm
+                  of the Trustmore Group, with a 25-year legacy built on trust,
+                  discretion, and integrity, we serve as your dedicated partner
+                  in navigating the complexities of wealth, investments, and
+                  cross-border opportunities.
                 </p>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Button className="bg-white text-gray-800 hover:bg-gray-100 px-8 py-6 text-lg rounded-[8px] border-2 border-white">
-                    GET STARTED
-                  </Button>
+                {/* Responsive Buttons - Modified for mobile */}
+                <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                  <Link href="/contact" className="w-full sm:w-auto">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/30 rounded-lg px-4 sm:px-6 md:px-8 backdrop-blur-sm text-sm sm:text-base [text-shadow:_0_1px_1px_rgba(0,0,0,0.3)]"
+                    >
+                      Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                   <Button
+                    size="lg"
                     variant="outline"
-                    className="bg-transparent border-white text-white hover:bg-white/20 px-8 py-6 text-lg rounded-[8px] border-2"
+                    className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/30 rounded-lg px-4 sm:px-6 md:px-8 backdrop-blur-sm text-sm sm:text-base [text-shadow:_0_1px_1px_rgba(0,0,0,0.3)]"
                   >
-                    HOW IT WORKS
+                    <span className="truncate">Watch Demo</span>{" "}
+                    <Play className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -59,137 +76,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Secure Transactions Section - Based on "Bring your finances to life" */}
-        <section className="py-24 bg-[#f9f7f4]">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
-                  Bring your transactions to life
-                </h2>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Using our platform, you can secure your full transaction portfolio, track payment milestones, and
-                  ensure the right funds reach the right parties at the right time for you.
-                </p>
-                <div className="mt-8">
-                  <Button className="bg-white text-gray-800 hover:bg-gray-100 border-2 border-gray-800 rounded-[8px] px-6 py-3 text-base">
-                    Learn how it works
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </div>
-              </div>
-              <div className="relative">
-                {/* Financial Dashboard Visualization */}
-                <div className="relative bg-white rounded-xl shadow-lg p-6 overflow-hidden">
-                  {/* Main circular element */}
-                  <div className="relative">
-                    <div className="aspect-square rounded-full border-8 border-[#f0f0f0] relative max-w-md mx-auto">
-                      {/* Person image placeholder */}
-                      <div className="absolute inset-4 rounded-full bg-gray-200 overflow-hidden">
-                        <Image
-                          src="/placeholder.svg?height=300&width=300"
-                          alt="User working"
-                          width={300}
-                          height={300}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+        {/* Advisor Platform Section */}
+        <AdvisorPlatform />
 
-                      {/* Asset composition card */}
-                      <div className="absolute -right-16 top-8 bg-white rounded-lg shadow-md p-3 w-56">
-                        <div className="text-xs font-semibold mb-2">Transaction composition</div>
-                        <div className="grid grid-cols-2 gap-1">
-                          <div className="bg-[#4c7c64] text-white p-1.5 text-center">
-                            <div className="font-bold text-xs">BUSINESS</div>
-                            <div className="text-xs">56%</div>
-                          </div>
-                          <div className="bg-[#8ca892] text-white p-1.5 text-center">
-                            <div className="font-bold text-xs">SAVINGS</div>
-                            <div className="text-xs">24%</div>
-                          </div>
-                          <div className="bg-[#a8c2b3] text-white p-1.5 text-center">
-                            <div className="font-bold text-xs">PROPERTY</div>
-                            <div className="text-xs">12%</div>
-                          </div>
-                          <div className="bg-[#cde1d7] text-gray-700 p-1.5 text-center">
-                            <div className="font-bold text-xs">OTHER</div>
-                            <div className="text-xs">8%</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Circular feature icons */}
-                      <div className="absolute -top-12 -left-12 bg-white rounded-full p-4 shadow-md">
-                        <div className="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-gray-600"
-                          >
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5"></path>
-                            <path d="M2 12l10 5 10-5"></path>
-                          </svg>
-                        </div>
-                        <div className="text-xs font-medium text-center mt-1">Equity Grants</div>
-                      </div>
-
-                      <div className="absolute -bottom-8 left-16 bg-white rounded-full p-4 shadow-md">
-                        <div className="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-gray-600"
-                          >
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                          </svg>
-                        </div>
-                        <div className="text-xs font-medium text-center mt-1">New Home</div>
-                      </div>
-
-                      <div className="absolute -bottom-4 -right-8 bg-white rounded-full p-4 shadow-md">
-                        <div className="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-gray-600"
-                          >
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                          </svg>
-                        </div>
-                        <div className="text-xs font-medium text-center mt-1">Business sale</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Services Tabs Section */}
+        <ServicesTabs />
 
         {/* Advisor Section - Based on "Advisors who just get equity and businesses" */}
         <section className="py-24 bg-white">
@@ -211,7 +102,9 @@ export default function Home() {
 
                   {/* Overlapping elements */}
                   <div className="absolute bottom-0 left-0 bg-[#0a2342] text-white p-6 rounded-tr-xl max-w-xs">
-                    <div className="text-xl font-semibold">Founding a company</div>
+                    <div className="text-xl font-semibold">
+                      Founding a company
+                    </div>
                   </div>
 
                   {/* Profile circles */}
@@ -241,18 +134,26 @@ export default function Home() {
                 </div>
               </div>
               <div className="order-1 md:order-2">
-                <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
-                  Escrow experts who understand your business
+                <h2 className="text-4xl sm:text-5xl font-semibold mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
+                  Why IPRIVE?
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  No more generic transaction services. Find escrow specialists with experience working with
-                  acquisitions and IPOs, stock options, RSUs, and business sales. Personally vetted by iPrive.
+                  25-Year Trustmore Legacy of excellence, transparency, and
+                  trust. Global Expertise, Local Insight — with dedicated
+                  offices in India and Dubai. Discreet, White-Glove Service
+                  inspired by the world’s most respected Swiss banks. Privileged
+                  Access to Global Markets, Luxury Assets, and Private Deals.
+                  Bespoke, Human-Led Advisory — powered by data, driven by
+                  relationships. At IPRIVE, we’re more than wealth managers —
+                  we’re curators of enduring value, custodians of generational
+                  legacy, and architects of financial freedom. Your world, your
+                  ambitions, our expertise. Discover the IPRIVE experience.
                 </p>
                 <Link
-                  href="#"
+                  href="/contact"
                   className="text-[oklch(0.257_0.09_281.288)] hover:underline font-medium inline-flex items-center"
                 >
-                  Our specialist evaluation process
+                  Let’s Design Your Legacy
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
@@ -265,7 +166,7 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
+                <h2 className="text-4xl sm:text-5xl font-semibold mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
                   Collaborating with your escrow team, made easy
                 </h2>
                 <div className="space-y-6 mt-8">
@@ -279,7 +180,9 @@ export default function Home() {
                       <div className="flex-shrink-0 mt-1">
                         <Check className="h-6 w-6 text-[oklch(0.257_0.09_281.288)]" />
                       </div>
-                      <p className="text-lg text-gray-600 font-medium">{feature}</p>
+                      <p className="text-lg text-gray-600 font-medium">
+                        {feature}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -314,11 +217,15 @@ export default function Home() {
                         </div>
                         <div className="text-sm">
                           <div>Share tax docs</div>
-                          <div className="text-gray-500 text-xs">with your advisor</div>
+                          <div className="text-gray-500 text-xs">
+                            with your advisor
+                          </div>
                         </div>
                       </div>
                       <div className="mt-3">
-                        <button className="bg-[#0a2342] text-white text-sm py-1 px-4 rounded">Upload</button>
+                        <button className="bg-[#0a2342] text-white text-sm py-1 px-4 rounded">
+                          Upload
+                        </button>
                       </div>
                     </div>
 
@@ -376,8 +283,7 @@ export default function Home() {
                       </div>
                       <div className="bg-gray-100 rounded-lg p-3 text-sm">
                         <p>
-                          Hi Sean, I have a freelance business that I need tax help for. I'm not sure if I need tax prep
-                          or more comprehensive planning. Can you help me understand the difference?
+                          How private and secure is my relationship with IPRIVE?
                         </p>
                       </div>
                     </div>
@@ -386,7 +292,12 @@ export default function Home() {
                   <div className="absolute bottom-0 right-0 bg-white rounded-xl shadow-md p-4 max-w-xs">
                     <div className="flex items-start mb-2">
                       <div className="bg-[#e6f7eb] rounded-lg p-3 text-sm mr-3">
-                        <p>Hi Naomi, I'd be happy to help.</p>
+                        <p>
+                          Discretion is at the heart of everything we do — your
+                          affairs stay strictly confidential, protected by the
+                          same international standards trusted by the world’s
+                          elite.
+                        </p>
                       </div>
                       <div className="w-10 h-10 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden">
                         <Image
@@ -402,14 +313,24 @@ export default function Home() {
                 </div>
               </div>
               <div className="order-1 md:order-2">
-                <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
+                <h2 className="text-4xl sm:text-5xl font-semibold mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
                   Meet your iPrive Concierge
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  The iPrive Concierge team are not <em>just</em> real humans, they're a highly-qualified team with
-                  experience in escrow services and they are dedicated to helping you have a seamless transaction
-                  experience.
+                  At IPRIVE Global Private Wealth, your experience is personal,
+                  discreet, and seamless — because it’s handled by real people
+                  who understand your world. Our IPRIVE Concierge team isn’t
+                  just a service desk — they are highly-qualified, experienced
+                  private wealth professionals, trained in global investments,
+                  legacy planning, and high-value advisory services.Each
+                  concierge is personally dedicated to curating opportunities,
+                  navigating complexities, and making your wealth journey
+                  effortless.
                 </p>
+                <h2 className="text-2xl sm:text-2xl font-medium mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
+                  It’s not automated. It’s not outsourced. It’s deeply personal,
+                  discreet, and entirely yours.
+                </h2>
                 <Button className="bg-white text-gray-800 hover:bg-gray-100 border-2 border-gray-800 rounded-[8px] px-6 py-3 text-base">
                   Connect with a concierge
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -423,12 +344,12 @@ export default function Home() {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-[oklch(0.257_0.09_281.288)] mb-6">
+              <h2 className="text-4xl sm:text-5xl font-semibold text-[oklch(0.257_0.09_281.288)] mb-6">
                 What Our Clients Say
               </h2>
               <p className="text-lg text-gray-600">
-                Hear from businesses and individuals who have experienced the security and efficiency of iPrive's escrow
-                services.
+                Hear from businesses and individuals who have experienced the
+                security and efficiency of iPrive's escrow services.
               </p>
             </div>
 
@@ -471,12 +392,18 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-8 italic">"{testimonial.quote}"</p>
+                  <p className="text-gray-600 mb-8 italic">
+                    "{testimonial.quote}"
+                  </p>
                   <div className="flex items-center">
                     <div className="h-12 w-12 rounded-full bg-gray-300 mr-4"></div>
                     <div>
-                      <h4 className="font-semibold text-gray-800">{testimonial.author}</h4>
-                      <p className="text-sm text-gray-500">{testimonial.title}</p>
+                      <h4 className="font-semibold text-gray-800">
+                        {testimonial.author}
+                      </h4>
+                      <p className="text-sm text-gray-500">
+                        {testimonial.title}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -491,12 +418,13 @@ export default function Home() {
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-[oklch(0.257_0.09_281.288)]">
+                  <h2 className="text-4xl sm:text-5xl font-semibold mb-6 text-[oklch(0.257_0.09_281.288)]">
                     Ready to secure your transactions?
                   </h2>
                   <p className="text-lg text-gray-600 mb-8">
-                    Join thousands of businesses that trust iPrive for their financial security and transaction needs.
-                    Our team is ready to help you get started.
+                    Join thousands of businesses that trust iPrive for their
+                    financial security and transaction needs. Our team is ready
+                    to help you get started.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Button className="bg-white text-gray-800 hover:bg-gray-100 border-2 border-gray-800 rounded-[8px] px-8 py-4 text-lg">
@@ -512,11 +440,16 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="bg-white p-10 rounded-xl shadow-sm">
-                  <h3 className="text-2xl font-semibold mb-6 text-gray-800">Request a Demo</h3>
+                  <h3 className="text-2xl font-semibold mb-6 text-gray-800">
+                    Request a Demo
+                  </h3>
                   <form className="space-y-6">
                     <div className="grid grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="first-name" className="block text-sm font-medium mb-2 text-gray-700">
+                        <label
+                          htmlFor="first-name"
+                          className="block text-sm font-medium mb-2 text-gray-700"
+                        >
                           First Name
                         </label>
                         <input
@@ -526,7 +459,10 @@ export default function Home() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="last-name" className="block text-sm font-medium mb-2 text-gray-700">
+                        <label
+                          htmlFor="last-name"
+                          className="block text-sm font-medium mb-2 text-gray-700"
+                        >
                           Last Name
                         </label>
                         <input
@@ -537,7 +473,10 @@ export default function Home() {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-700">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium mb-2 text-gray-700"
+                      >
                         Business Email
                       </label>
                       <input
@@ -547,7 +486,10 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium mb-2 text-gray-700">
+                      <label
+                        htmlFor="company"
+                        className="block text-sm font-medium mb-2 text-gray-700"
+                      >
                         Company Name
                       </label>
                       <input
@@ -577,8 +519,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
-  )
+  );
 }
