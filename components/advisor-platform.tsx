@@ -70,7 +70,7 @@ export default function AdvisorPlatform() {
             <div className="relative w-full">
               <div className="h-[380px] w-full">
                 <Image
-                  src="/placeholder.svg?height=380&width=450"
+                  src="/section2.png"
                   alt="Financial advisor"
                   width={450}
                   height={380}
