@@ -20,7 +20,7 @@ export default function Home() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/vid.mp4" type="video/mp4" />
+            <source src="/main.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -43,12 +43,11 @@ export default function Home() {
 
                 {/* Description text */}
                 <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed [text-shadow:_0_1px_2px_rgba(0,0,0,0.4)]">
-                  At IPRIVE, we believe that wealth is more than just capital,
-                  it’s legacy, influence, and vision. As the private wealth arm
-                  of the Trustmore Group, with a 25-year legacy built on trust,
-                  discretion, and integrity, we serve as your dedicated partner
-                  in navigating the complexities of wealth, investments, and
-                  cross-border opportunities.
+                  At IPRIVE, we see wealth as more than capital, it's legacy,
+                  influence, and vision. As the private wealth arm of the
+                  Trustmore Group, we bring 25 years of trusted expertise to
+                  guide you through the complexities of wealth, investment, and
+                  global opportunities.
                 </p>
 
                 {/* Responsive Buttons - Modified for mobile */}

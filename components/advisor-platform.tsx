@@ -8,21 +8,21 @@ export default function AdvisorPlatform() {
   // Define all options with their selected state
   const categories = [
     {
-      name: "Tax advice",
+      name: "Investment advisory",
       bgColor: "bg-[#b8d8f8]",
       options: [
-        { name: "Crypto, NFTs", selected: false },
-        { name: "Equity taxes", selected: true },
-        { name: "Exercise options", selected: false },
+        { name: "Start Investing", selected: false },
+        { name: "Buy Global Real Estate", selected: true },
+        { name: "Explore Citizenship", selected: false },
       ],
     },
     {
-      name: "Financial advice",
+      name: "Family Office advisory",
       bgColor: "bg-[#f9f7f4]",
       options: [
-        { name: "Starting a business", selected: true },
-        { name: "Retirement", selected: false },
-        { name: "Buying a house", selected: true },
+        { name: "Create Entry Strategy", selected: true },
+        { name: "Explore Rare Auctions", selected: false },
+        { name: "Buy Private Jets", selected: true },
       ],
     },
     {
@@ -31,7 +31,7 @@ export default function AdvisorPlatform() {
       options: [
         { name: "Create a will", selected: false },
         { name: "Create a trust", selected: false },
-        { name: "Selling my business", selected: false },
+        { name: "Protect my business", selected: false },
       ],
     },
   ];
@@ -43,24 +43,16 @@ export default function AdvisorPlatform() {
           {/* Left Column - Text Content */}
           <div className="max-w-xl">
             <h2 className="text-4xl sm:text-5xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-6">
-              A platform for tax and financial advice tailored to you
+              A platform for financial solutions tailored to your needs
             </h2>
             <p className="text-lg text-gray-700 mb-8">
-              Discover and work with advisors who have experience in your
-              specific situation, including knowledge about company equity,
-              small business, and crypto.
+              Discover and work with qualified advisors who have experience in
+              your specific situation, including knowledge about company equity,
+              small business, enterprises or listed companies around the world.
             </p>
-            <p className="text-lg text-gray-700 mb-8">
-              Invited by your advisor?{" "}
-              <a
-                href="#"
-                className="text-[oklch(0.257_0.09_281.288)] hover:underline"
-              >
-                Learn more
-              </a>
-            </p>
+
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-[#f9b55a] hover:bg-[#f9b55a]/90 text-white border-0 rounded-md px-8 py-6 text-base font-medium">
+              <Button className="bg-transparent border-2 border-gray-800 text-gray-800 hover:bg-gray-100 rounded-md px-8 py-6 text-base font-medium">
                 GET STARTED
               </Button>
               <Button
