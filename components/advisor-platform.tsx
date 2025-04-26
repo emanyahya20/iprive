@@ -37,17 +37,15 @@ export default function AdvisorPlatform() {
   ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-12 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* Left Column - Text Content positioned lower */}
-          <div className="max-w-xl pt-16">
-            {" "}
-            {/* Added top padding to move content down */}
-            <h2 className="text-4xl sm:text-5xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-6">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-20 items-start">
+          {/* Left Column - Text Content */}
+          <div className="max-w-xl md:pt-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-4 md:mb-6">
               A Bespoke Wealth Platform, Designed Around You
             </h2>
-            <p className="text-lg text-gray-700 mb-8">
+            <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8">
               At IPRIVE, we don't just manage wealth — we preserve legacies,
               unlock global opportunities, and build multigenerational
               resilience. Whether you're a business founder, investor, or
@@ -62,21 +60,21 @@ export default function AdvisorPlatform() {
           <div className="relative">
             {/* Person Image Container */}
             <div className="relative w-full flex justify-center">
-              <div className="h-[380px] w-[450px]">
+              <div className="h-64 sm:h-80 md:h-96 w-full max-w-md">
                 <Image
                   src="/section1.png"
                   alt="Financial advisor"
                   width={450}
                   height={380}
-                  className="h-full w-auto object-cover"
+                  className="h-full w-auto object-cover mx-auto"
                 />
               </div>
             </div>
 
             {/* Planning box with overlap */}
-            <div className="relative mt-[-60px]">
+            <div className="relative mt-4 md:mt-[-60px]">
               {/* Logo Circle */}
-              <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 z-10 w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+              <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 z-10 w-16 md:w-20 h-16 md:h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
                 <Image
                   src="/itrustmore.png"
                   alt="Circle Image"
@@ -87,14 +85,14 @@ export default function AdvisorPlatform() {
               </div>
 
               {/* Card content */}
-              <div className="bg-white p-6 shadow-sm">
+              <div className="bg-white p-4 md:p-6 shadow-sm">
                 <div className="pt-6">
-                  <h3 className="text-2xl font-bold text-gray-900 text-center mb-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-6">
                     What are you planning for?
                   </h3>
 
-                  {/* All categories displayed at once */}
-                  <div className="grid grid-cols-3 gap-4">
+                  {/* Categories displayed responsively */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {categories.map((category, idx) => (
                       <div key={idx} className="flex flex-col space-y-2">
                         {/* Category Header */}
