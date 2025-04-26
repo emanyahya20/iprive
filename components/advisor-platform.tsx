@@ -43,12 +43,16 @@ export default function AdvisorPlatform() {
           {/* Left Column - Text Content */}
           <div className="max-w-xl">
             <h2 className="text-4xl sm:text-5xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-6">
-              A platform for financial solutions tailored to your needs
+              A Bespoke Wealth Platform, Designed Around You
             </h2>
             <p className="text-lg text-gray-700 mb-8">
-              Discover and work with qualified advisors who have experience in
-              your specific situation, including knowledge about company equity,
-              small business, enterprises or listed companies around the world.
+              At IPRIVE, we don’t just manage wealth — we preserve legacies,
+              unlock global opportunities, and build multigenerational
+              resilience. Whether you’re a business founder, investor, or
+              inheritor of wealth, our advisors understand the nuances of your
+              world — from private assets and structured holdings to real
+              estate, venture capital, and global mobility. Confidential.
+              Composed. Crafted for those who value more than just returns.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -70,7 +74,7 @@ export default function AdvisorPlatform() {
             <div className="relative w-full">
               <div className="h-[380px] w-full">
                 <Image
-                  src="/section2.png"
+                  src="/section1.png"
                   alt="Financial advisor"
                   width={450}
                   height={380}
@@ -81,8 +85,14 @@ export default function AdvisorPlatform() {
               {/* Card positioned below the image */}
               <div className="relative mt-[-40px]">
                 {/* Logo Circle - Positioned to overlap between image and card */}
-                <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 z-10 w-20 h-20 rounded-full bg-[#0a2342] flex items-center justify-center">
-                  <span className="text-white text-3xl font-bold">iP</span>
+                <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 z-10 w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                  <Image
+                    src="/itrustmore.png" // 👉 your image path here
+                    alt="Circle Image"
+                    width={80}
+                    height={80}
+                    className="object-cover w-full h-full"
+                  />
                 </div>
 
                 {/* Card */}

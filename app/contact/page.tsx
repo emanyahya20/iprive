@@ -247,7 +247,10 @@ export default function ContactUs() {
       </section>
 
       {/* Contact Form and Office Information Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section
+        id="form"
+        className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-12">

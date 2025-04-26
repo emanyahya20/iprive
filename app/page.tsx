@@ -91,7 +91,7 @@ export default function Home() {
                   {/* Main image */}
                   <div className="rounded-xl overflow-hidden">
                     <Image
-                      src="/section1.png"
+                      src="/section2.png"
                       alt="Business professional"
                       width={600}
                       height={500}
@@ -106,28 +106,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Profile circles */}
-                  <div className="absolute -bottom-10 right-20 w-20 h-20 rounded-full border-4 border-white overflow-hidden bg-gray-200">
-                    <Image
-                      src="/placeholder.svg?height=80&width=80"
-                      alt="Advisor 1"
-                      width={80}
-                      height={80}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  <div className="absolute -right-4 bottom-20 w-24 h-24 rounded-full border-4 border-white overflow-hidden bg-gray-200">
-                    <Image
-                      src="/placeholder.svg?height=96&width=96"
-                      alt="Advisor 2"
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  <div className="absolute -right-8 bottom-48 w-16 h-16 rounded-full bg-[#f9b55a] flex items-center justify-center">
+                  <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-16 h-16 rounded-full bg-[#f9b55a] flex items-center justify-center">
                     <Check className="h-8 w-8 text-white" />
                   </div>
                 </div>
@@ -160,20 +139,21 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Collaboration Section - Based on "Collaborating with your advisors, made easy" */}
+        {/* Collaboration Section - Original first */}
         <section className="py-24 bg-[#f9f7f4]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Original Collaboration Section */}
+            <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
               <div>
                 <h2 className="text-4xl sm:text-5xl font-semibold mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
                   Collaborating with your escrow team, made easy
                 </h2>
                 <div className="space-y-6 mt-8">
                   {[
-                    "SECURE, DIGITAL CLIENT PORTAL",
-                    "PROACTIVE EMAIL NOTIFICATIONS",
-                    "CENTRALIZED TRANSACTION & FINANCIAL DOC STORAGE",
-                    "SHARED BUSINESS ACCOUNTS",
+                    "Your Wealth, Our Commitment",
+                    "Tailored Strategies for Discerning Clients",
+                    "Global Reach, Personal Touch",
+                    "Seamless Collaboration with Trusted Advisors",
                   ].map((feature, index) => (
                     <div key={index} className="flex items-start gap-4">
                       <div className="flex-shrink-0 mt-1">
@@ -192,7 +172,7 @@ export default function Home() {
                   {/* Person image */}
                   <div className="rounded-xl overflow-hidden">
                     <Image
-                      src="/placeholder.svg?height=400&width=600"
+                      src="/section4.png"
                       alt="Person working on laptop"
                       width={600}
                       height={400}
@@ -227,18 +207,72 @@ export default function Home() {
                         </button>
                       </div>
                     </div>
-
-                    <div className="space-y-3">
-                      <div className="flex items-center">
-                        <div className="w-8 h-8 rounded-full bg-gray-200 mr-3"></div>
-                        <div className="flex-1 h-4 bg-gray-100 rounded"></div>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-8 h-8 rounded-full bg-gray-200 mr-3"></div>
-                        <div className="flex-1 h-4 bg-gray-100 rounded"></div>
-                      </div>
-                    </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* New Wealth Management Content */}
+            <div className="pt-16 border-t border-gray-200">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl sm:text-5xl font-semibold mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
+                  Your Wealth, Our Commitment
+                </h2>
+                <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+                  At IPRIVE, we understand that wealth is more than just
+                  numbers—it embodies your aspirations, achievements, and
+                  legacy. Our bespoke wealth management services are designed to
+                  align with your unique financial journey, offering
+                  personalized strategies that encompass investment management,
+                  estate planning, and philanthropic advisory. With a deep
+                  understanding of global markets and a commitment to
+                  discretion, we partner with you to navigate the complexities
+                  of wealth with confidence and clarity.
+                </p>
+              </div>
+
+              {/* Three Column Features */}
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-white p-8 rounded-xl shadow-sm">
+                  <h3 className="text-xl font-semibold mb-4 text-[oklch(0.257_0.09_281.288)]">
+                    Tailored Strategies for Discerning Clients
+                  </h3>
+                  <p className="text-gray-600">
+                    Our approach is centered on understanding your individual
+                    goals and crafting strategies that reflect your values and
+                    ambitions. Whether it's optimizing your investment
+                    portfolio, planning for generational wealth transfer, or
+                    exploring philanthropic opportunities, our advisors provide
+                    insights and solutions that are as unique as you are.
+                  </p>
+                </div>
+
+                <div className="bg-white p-8 rounded-xl shadow-sm">
+                  <h3 className="text-xl font-semibold mb-4 text-[oklch(0.257_0.09_281.288)]">
+                    Global Reach, Personal Touch
+                  </h3>
+                  <p className="text-gray-600">
+                    With a presence in key financial hubs, including our
+                    strategic office in Dubai, IPRIVE offers a global
+                    perspective combined with local expertise. This positioning
+                    allows us to provide you with access to exclusive investment
+                    opportunities and insights into emerging markets, ensuring
+                    your wealth strategy is both comprehensive and
+                    forward-looking.
+                  </p>
+                </div>
+
+                <div className="bg-white p-8 rounded-xl shadow-sm">
+                  <h3 className="text-xl font-semibold mb-4 text-[oklch(0.257_0.09_281.288)]">
+                    Seamless Collaboration with Trusted Advisors
+                  </h3>
+                  <p className="text-gray-600">
+                    Our platform facilitates effortless collaboration between
+                    you and your dedicated advisory team. Through secure digital
+                    channels, you can engage in meaningful conversations, access
+                    tailored reports, and make informed decisions—all while
+                    enjoying the personalized service that defines IPRIVE.
+                  </p>
                 </div>
               </div>
             </div>
@@ -273,7 +307,7 @@ export default function Home() {
                     <div className="flex items-start mb-2">
                       <div className="w-10 h-10 rounded-full bg-gray-200 mr-3 flex-shrink-0 overflow-hidden">
                         <Image
-                          src="/placeholder.svg?height=40&width=40"
+                          src="/cs1.png"
                           alt="User"
                           width={40}
                           height={40}
@@ -300,7 +334,7 @@ export default function Home() {
                       </div>
                       <div className="w-10 h-10 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden">
                         <Image
-                          src="/placeholder.svg?height=40&width=40"
+                          src="/cs2.png"
                           alt="Advisor"
                           width={40}
                           height={40}
@@ -330,10 +364,12 @@ export default function Home() {
                   It’s not automated. It’s not outsourced. It’s deeply personal,
                   discreet, and entirely yours.
                 </h2>
-                <Button className="bg-white text-gray-800 hover:bg-gray-100 border-2 border-gray-800 rounded-[8px] px-6 py-3 text-base">
-                  Connect with a concierge
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <Link href="/contact">
+                  <Button className="bg-white text-gray-800 hover:bg-gray-100 border-2 border-gray-800 rounded-[8px] px-6 py-3 text-base">
+                    Connect with a concierge
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -353,18 +389,6 @@ export default function Home() {
                     financial security and transaction needs. Our team is ready
                     to help you get started.
                   </p>
-                  <div className="flex flex-wrap gap-4">
-                    <Button className="bg-white text-gray-800 hover:bg-gray-100 border-2 border-gray-800 rounded-[8px] px-8 py-4 text-lg">
-                      Get Started
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="border-2 border-gray-800 text-gray-800 hover:bg-gray-100 rounded-[8px] px-8 py-4 text-lg"
-                    >
-                      Contact Sales
-                    </Button>
-                  </div>
                 </div>
                 <div className="bg-white p-10 rounded-xl shadow-sm">
                   <h3 className="text-2xl font-semibold mb-6 text-gray-800">
