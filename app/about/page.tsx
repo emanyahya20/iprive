@@ -42,121 +42,38 @@ export default function AboutUs() {
 
       {/* About Us Section - Mobile Optimized */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
             About Us
           </h2>
           <div className="space-y-4 sm:space-y-6">
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Escrowpay is India's first and largest digital escrow partner,
-              providing secure transaction solutions for businesses of all
-              sizes.
+              IPRIVE Global Private Wealth is a bespoke wealth management
+              platform built exclusively for distinguished individuals,
+              families, and institutions around the world.
             </p>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Our platform combines cutting-edge technology with robust banking
-              partnerships to deliver escrow services that are not just secure,
-              but also simple and efficient.
+              Rooted in the legacy of the Trustmore Group — a name synonymous
+              with trust, innovation, and excellence for over 25 years — we
+              provide a seamless gateway to global real estate opportunities,
+              private investments, legacy planning, citizenship programs, and
+              high-value wealth structuring.
             </p>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              With a decade of experience in the financial technology sector, we
-              understand the unique challenges businesses face in securing their
-              transactions.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Impact Section - Mobile Optimized */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#f9f7f4]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
-            Our Impact
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {[
-              {
-                title: "Trusted by Leading Banks",
-                content:
-                  "India's top RBI regulated banks have enabled us to offer state-of-the-art escrow solutions.",
-              },
-              {
-                title: "Thousands of Businesses",
-                content:
-                  "We serve thousands of businesses daily with tailor-made scalable escrow services.",
-              },
-              {
-                title: "10 Years of Excellence",
-                content:
-                  "We have transformed how businesses in India approach secure transactions.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              At IPRIVE, we believe wealth is more than an asset. It is a
+              responsibility, a legacy, and a means to create lasting impact.
+              Our approach is deeply personal, fully independent, and globally
+              integrated — ensuring every strategy is tailored precisely to the
+              unique goals of our clients. Explore the larger vision that drives
+              us at{" "}
+              <a
+                href="https://itrustmore.com/about"
+                className="text-blue-600 hover:text-blue-800 hover:underline"
               >
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600">
-                  {item.content}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section - Mobile Optimized */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-8 sm:gap-10 md:gap-12 items-center">
-            {/* Image without container - just the frame */}
-            <img
-              src="/whyy.png"
-              alt="Why Choose Escrowpay"
-              className="lg:w-1/2 w-full h-auto object-cover rounded-lg shadow-md border border-gray-200"
-            />
-
-            <div className="lg:w-1/2">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
-                Why Choose Escrowpay
-              </h2>
-
-              <div className="space-y-4 sm:space-y-6">
-                {[
-                  {
-                    title: "Built for Businesses",
-                    content:
-                      "We make escrow services easy to use, no matter your business size or sector.",
-                  },
-                  {
-                    title: "Proven Track Record",
-                    content:
-                      "With years of expertise and partnerships with leading banks.",
-                  },
-                  {
-                    title: "Efficient & Transparent",
-                    content:
-                      "Ensuring funds are disbursed only when terms are met—quickly and transparently.",
-                  },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-3 sm:gap-4">
-                    <div className="flex-shrink-0 bg-[#f9f7f4] p-1.5 sm:p-2 rounded-full mt-0.5 sm:mt-1">
-                      <Check className="h-4 w-4 sm:h-5 sm:w-5 text-gray-900" />
-                    </div>
-                    <div>
-                      <h3 className="text-base sm:text-lg font-medium text-gray-900">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm sm:text-base text-gray-600 mt-0.5 sm:mt-1">
-                        {item.content}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+                Trustmore Group
+              </a>
+              .
+            </p>
           </div>
         </div>
       </section>

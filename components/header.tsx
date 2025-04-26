@@ -32,7 +32,6 @@ export function Header() {
   const transparentHeaderPages = [
     "/",
     "/about",
-    "/media",
     "/team",
     "/contact",
     "/knowledge-center",
@@ -132,20 +131,7 @@ export function Header() {
               >
                 Team
               </Link>
-              <Link
-                href="/media"
-                className={`text-base font-semibold px-1.5 ${
-                  pathname === "/media"
-                    ? isScrolled
-                      ? "text-gray-900"
-                      : "text-white"
-                    : isScrolled
-                    ? "text-gray-700"
-                    : "text-white hover:text-white"
-                }`}
-              >
-                Media
-              </Link>
+
               <Link
                 href="/knowledge-center"
                 className={`text-base font-semibold px-1.5 ${

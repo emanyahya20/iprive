@@ -35,7 +35,9 @@ export default function HighValuePrivateInvestments() {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
                   <span className="block">High-Value Private Investments</span>
                   <span className="block text-2xl sm:text-3xl md:text-4xl font-medium mt-3 sm:mt-4 text-white [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-                    Unparalleled Access to Private Markets, Beyond the Ordinary.
+                    Unparalleled Access to Private Markets,
+                    <br />
+                    Beyond the Ordinary.
                   </span>
                 </h1>
               </div>
@@ -46,7 +48,7 @@ export default function HighValuePrivateInvestments() {
 
       {/* Introduction Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
             High-Value Private Investments
           </h2>
@@ -69,7 +71,7 @@ export default function HighValuePrivateInvestments() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Completely aligned boxes with fixed height headings */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
@@ -78,87 +80,54 @@ export default function HighValuePrivateInvestments() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <HomeIcon className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Pre-IPO & Private Equity Deals
-                  </h3>
+              {/* Each service box with guaranteed consistent alignment */}
+              {[
+                {
+                  icon: <HomeIcon className="h-6 w-6 text-black" />,
+                  title: "Pre-IPO & Private Equity Deals",
+                  desc: "Gain early access to high-potential private companies before they hit public markets. From technology innovators, consumer brands, to emerging market disruptors, we identify strategic opportunities with clear exit strategies, robust governance, and proven leadership.",
+                },
+                {
+                  icon: <Building className="h-6 w-6 text-black" />,
+                  title: "Global Startup & Venture Capital Syndicates",
+                  desc: "Participate in carefully vetted, high-growth early-stage and growth-stage startups across sectors like fintech, healthtech, AI, sustainable infrastructure, and consumer tech — alongside leading VCs and family offices.",
+                },
+                {
+                  icon: <Globe className="h-6 w-6 text-black" />,
+                  title: "Alternative Assets",
+                  desc: "Diversify into private debt, structured credit, income-yielding assets, luxury collectibles, art funds, infrastructure projects, and private REITs globally. These carefully structured opportunities are designed for portfolio stability, yield, and capital appreciation.",
+                },
+                {
+                  icon: <Award className="h-6 w-6 text-black" />,
+                  title: "Real Estate-Backed Investments",
+                  desc: "Invest in development projects, rental income portfolios, and luxury real estate funds globally. Secure and profitable, these assets offer tangible value along with steady returns.",
+                },
+                {
+                  icon: <BarChart2 className="h-6 w-6 text-black" />,
+                  title: "Impact & ESG-Focused Investments",
+                  desc: "Align wealth with purpose. We bring opportunities in sustainable, socially impactful, and ESG-compliant ventures, allowing clients to achieve responsible investing goals without compromising on returns.",
+                },
+              ].map((service, index) => (
+                <div key={index} className="p-4 bg-[#f9f7f4] rounded-lg h-full">
+                  <div className="flex">
+                    <div className="flex-shrink-0 mt-0">{service.icon}</div>
+                    <div className="ml-3 flex-1">
+                      <div className="h-16 flex items-start">
+                        <h3 className="text-lg font-medium text-gray-800">
+                          {service.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-800 text-sm">{service.desc}</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-800 text-sm">
-                  Gain early access to high-potential private companies before
-                  they hit public markets. From technology innovators, consumer
-                  brands, to emerging market disruptors, we identify strategic
-                  opportunities with clear exit strategies, robust governance,
-                  and proven leadership.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Building className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Global Startup & Venture Capital Syndicates
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Participate in carefully vetted, high-growth early-stage and
-                  growth-stage startups across sectors like fintech, healthtech,
-                  AI, sustainable infrastructure, and consumer tech — alongside
-                  leading VCs and family offices.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Globe className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Alternative Assets
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Diversify into private debt, structured credit,
-                  income-yielding assets, luxury collectibles, art funds,
-                  infrastructure projects, and private REITs globally. These
-                  carefully structured opportunities are designed for portfolio
-                  stability, yield, and capital appreciation.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Award className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Real Estate-Backed Investments
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Invest in development projects, rental income portfolios, and
-                  luxury real estate funds globally. Secure and profitable,
-                  these assets offer tangible value along with steady returns.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <BarChart2 className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Impact & ESG-Focused Investments
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Align wealth with purpose. We bring opportunities in
-                  sustainable, socially impactful, and ESG-compliant ventures,
-                  allowing clients to achieve responsible investing goals
-                  without compromising on returns.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Section */}
+      {/* Why Choose Section - With properly aligned checkmarks */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
@@ -174,11 +143,13 @@ export default function HighValuePrivateInvestments() {
               "Co-Investment Options with Leading Global Funds",
               "Absolute Confidentiality, White-Glove Handling",
             ].map((item, index) => (
-              <div key={index} className="flex items-start gap-3 sm:gap-4">
-                <div className="flex-shrink-0 bg-white p-1.5 sm:p-2 rounded-full mt-0.5 sm:mt-1">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-gray-900" />
+              <div key={index} className="flex">
+                <div className="flex-shrink-0 mt-0.5">
+                  <Check className="h-5 w-5 text-gray-900" />
                 </div>
-                <p className="text-sm sm:text-base text-gray-600">{item}</p>
+                <p className="text-sm sm:text-base text-gray-600 ml-3">
+                  {item}
+                </p>
               </div>
             ))}
           </div>
@@ -187,10 +158,9 @@ export default function HighValuePrivateInvestments() {
 
       {/* Call to Action Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#f9f7f4]">
-        <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-relaxed mb-8">
-            Legacy of Trust. <br className="hidden sm:inline" />
-            Future of Private Wealth.
+            Legacy of Trust, Future of Private Wealth.
           </h2>
           <p className="text-lg sm:text-xl text-gray-700">
             For over 25 years, Trustmore Group has built a reputation for

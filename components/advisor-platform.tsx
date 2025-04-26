@@ -40,39 +40,29 @@ export default function AdvisorPlatform() {
     <section className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* Left Column - Text Content */}
-          <div className="max-w-xl">
+          {/* Left Column - Text Content positioned lower */}
+          <div className="max-w-xl pt-16">
+            {" "}
+            {/* Added top padding to move content down */}
             <h2 className="text-4xl sm:text-5xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-6">
               A Bespoke Wealth Platform, Designed Around You
             </h2>
             <p className="text-lg text-gray-700 mb-8">
-              At IPRIVE, we don’t just manage wealth — we preserve legacies,
+              At IPRIVE, we don't just manage wealth — we preserve legacies,
               unlock global opportunities, and build multigenerational
-              resilience. Whether you’re a business founder, investor, or
+              resilience. Whether you're a business founder, investor, or
               inheritor of wealth, our advisors understand the nuances of your
               world — from private assets and structured holdings to real
               estate, venture capital, and global mobility. Confidential.
               Composed. Crafted for those who value more than just returns.
             </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Button className="bg-transparent border-2 border-gray-800 text-gray-800 hover:bg-gray-100 rounded-md px-8 py-6 text-base font-medium">
-                GET STARTED
-              </Button>
-              <Button
-                variant="outline"
-                className="bg-transparent border-2 border-gray-800 text-gray-800 hover:bg-gray-100 rounded-md px-8 py-6 text-base font-medium"
-              >
-                HOW IT WORKS
-              </Button>
-            </div>
           </div>
 
-          {/* Right Column - Image and Card */}
+          {/* Right Column - Content with overlapping boxes */}
           <div className="relative">
-            {/* Person Image - Smaller height */}
-            <div className="relative w-full">
-              <div className="h-[380px] w-full">
+            {/* Person Image Container */}
+            <div className="relative w-full flex justify-center">
+              <div className="h-[380px] w-[450px]">
                 <Image
                   src="/section1.png"
                   alt="Financial advisor"
@@ -81,61 +71,61 @@ export default function AdvisorPlatform() {
                   className="h-full w-auto object-cover"
                 />
               </div>
+            </div>
 
-              {/* Card positioned below the image */}
-              <div className="relative mt-[-40px]">
-                {/* Logo Circle - Positioned to overlap between image and card */}
-                <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 z-10 w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                  <Image
-                    src="/itrustmore.png" // 👉 your image path here
-                    alt="Circle Image"
-                    width={80}
-                    height={80}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
+            {/* Planning box with overlap */}
+            <div className="relative mt-[-60px]">
+              {/* Logo Circle */}
+              <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 z-10 w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <Image
+                  src="/itrustmore.png"
+                  alt="Circle Image"
+                  width={80}
+                  height={80}
+                  className="object-cover w-full h-full"
+                />
+              </div>
 
-                {/* Card */}
-                <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <div className="pt-6">
-                    <h3 className="text-2xl font-bold text-gray-900 text-center mb-6">
-                      What are you planning for?
-                    </h3>
+              {/* Card content */}
+              <div className="bg-white p-6 shadow-sm">
+                <div className="pt-6">
+                  <h3 className="text-2xl font-bold text-gray-900 text-center mb-6">
+                    What are you planning for?
+                  </h3>
 
-                    {/* All categories displayed at once */}
-                    <div className="grid grid-cols-3 gap-4">
-                      {categories.map((category, idx) => (
-                        <div key={idx} className="flex flex-col space-y-2">
-                          {/* Category Header */}
-                          <div
-                            className={`py-2 px-1 text-center rounded-md ${category.bgColor}`}
-                          >
-                            <span className="text-gray-900 font-medium">
-                              {category.name}
-                            </span>
-                          </div>
-
-                          {/* Category Options */}
-                          <div className="space-y-2">
-                            {category.options.map((option, optIdx) => (
-                              <button
-                                key={optIdx}
-                                className={`w-full text-left py-2 px-3 rounded-md flex items-center text-xs ${
-                                  option.selected
-                                    ? "bg-[#0a2342] text-white"
-                                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                                }`}
-                              >
-                                {option.selected && (
-                                  <Check className="h-3 w-3 mr-1 flex-shrink-0" />
-                                )}
-                                <span className="truncate">{option.name}</span>
-                              </button>
-                            ))}
-                          </div>
+                  {/* All categories displayed at once */}
+                  <div className="grid grid-cols-3 gap-4">
+                    {categories.map((category, idx) => (
+                      <div key={idx} className="flex flex-col space-y-2">
+                        {/* Category Header */}
+                        <div
+                          className={`py-2 px-1 text-center ${category.bgColor}`}
+                        >
+                          <span className="text-gray-900 font-medium">
+                            {category.name}
+                          </span>
                         </div>
-                      ))}
-                    </div>
+
+                        {/* Category Options */}
+                        <div className="space-y-2">
+                          {category.options.map((option, optIdx) => (
+                            <button
+                              key={optIdx}
+                              className={`w-full text-left py-2 px-3 flex items-center text-xs ${
+                                option.selected
+                                  ? "bg-[#0a2342] text-white"
+                                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                              }`}
+                            >
+                              {option.selected && (
+                                <Check className="h-3 w-3 mr-1 flex-shrink-0" />
+                              )}
+                              <span className="truncate">{option.name}</span>
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

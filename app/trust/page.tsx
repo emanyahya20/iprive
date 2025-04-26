@@ -5,11 +5,11 @@ import Link from "next/link";
 import {
   Check,
   Building,
-  FileText,
+  Home as HomeIcon,
   Globe,
-  Shield,
-  Users,
-  BookOpen,
+  BarChart2,
+  Award,
+  CreditCard,
 } from "lucide-react";
 
 export default function LegacyPlanning() {
@@ -49,7 +49,7 @@ export default function LegacyPlanning() {
 
       {/* Introduction Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
             Legacy Planning, Trust Formation & Executive Protection
           </h2>
@@ -72,7 +72,7 @@ export default function LegacyPlanning() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Completely aligned boxes with fixed height headings */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
@@ -81,100 +81,59 @@ export default function LegacyPlanning() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Building className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Trust & Foundation Structures
-                  </h3>
+              {/* Each service box with guaranteed consistent alignment */}
+              {[
+                {
+                  icon: <HomeIcon className="h-6 w-6 text-black" />,
+                  title: "Trust & Foundation Structures",
+                  desc: "Craft custom domestic and offshore trusts, family foundations, and holding structures that protect personal wealth, minimize liabilities, and streamline succession — across generations and jurisdictions.",
+                },
+                {
+                  icon: <Building className="h-6 w-6 text-black" />,
+                  title: "Family Governance & Succession Advisory",
+                  desc: "Develop family constitutions, governance frameworks, and succession roadmaps that provide clarity, security, and alignment — ensuring legacy assets are transferred smoothly, with clear leadership transitions.",
+                },
+                {
+                  icon: <Globe className="h-6 w-6 text-black" />,
+                  title: "Board Advisory & Business Continuity Planning",
+                  desc: "For business owners and boards, we offer enterprise protection strategies, succession policies, and business continuity solutions designed to maintain operational control and leadership resilience, no matter the circumstance.",
+                },
+                {
+                  icon: <Award className="h-6 w-6 text-black" />,
+                  title: "Keyman Protection & Executive Insurance",
+                  desc: "Secure your enterprise's leadership with bespoke Keyman Protection plans and executive risk covers. In unforeseen scenarios, these solutions offer critical financial cushioning, safeguard investor confidence, and maintain organizational stability.",
+                },
+                {
+                  icon: <BarChart2 className="h-6 w-6 text-black" />,
+                  title: "Cross-Border Estate Structuring",
+                  desc: "Specializing in multi-jurisdictional asset structuring, inheritance tax mitigation, and estate compliance for globally mobile individuals and international business owners.",
+                },
+                {
+                  icon: <BarChart2 className="h-6 w-6 text-black" />,
+                  title: "Will Drafting & Estate Documentation",
+                  desc: "Coordinate airtight, jurisdictionally compliant wills, trusts, POAs, and estate transfer documentation, backed by our international legal and fiduciary partners.",
+                },
+              ].map((service, index) => (
+                <div key={index} className="p-4 bg-[#f9f7f4] rounded-lg h-full">
+                  <div className="flex">
+                    <div className="flex-shrink-0 mt-0">{service.icon}</div>
+                    <div className="ml-3 flex-1">
+                      <div className="h-16 flex items-start">
+                        <h3 className="text-lg font-medium text-gray-800">
+                          {service.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-800 text-sm">{service.desc}</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-800 text-sm">
-                  Craft custom domestic and offshore trusts, family foundations,
-                  and holding structures that protect personal wealth, minimize
-                  liabilities, and streamline succession — across generations
-                  and jurisdictions.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Users className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Family Governance & Succession Advisory
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Develop family constitutions, governance frameworks, and
-                  succession roadmaps that provide clarity, security, and
-                  alignment — ensuring legacy assets are transferred smoothly,
-                  with clear leadership transitions.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <BookOpen className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Board Advisory & Business Continuity Planning
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  For business owners and boards, we offer enterprise protection
-                  strategies, succession policies, and business continuity
-                  solutions designed to maintain operational control and
-                  leadership resilience, no matter the circumstance.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Shield className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Keyman Protection & Executive Insurance
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Secure your enterprise's leadership with bespoke Keyman
-                  Protection plans and executive risk covers. In unforeseen
-                  scenarios, these solutions offer critical financial
-                  cushioning, safeguard investor confidence, and maintain
-                  organizational stability.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Globe className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Cross-Border Estate Structuring
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Specializing in multi-jurisdictional asset structuring,
-                  inheritance tax mitigation, and estate compliance for globally
-                  mobile individuals and international business owners.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <FileText className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Will Drafting & Estate Documentation
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Coordinate airtight, jurisdictionally compliant wills, trusts,
-                  POAs, and estate transfer documentation, backed by our
-                  international legal and fiduciary partners.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Section */}
+      {/* Why Choose Section - With properly aligned checkmarks */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
@@ -190,11 +149,13 @@ export default function LegacyPlanning() {
               "Exclusive Access to Global Structuring Expertise",
               "Dedicated Family Office & Corporate Advisory Teams",
             ].map((item, index) => (
-              <div key={index} className="flex items-start gap-3 sm:gap-4">
-                <div className="flex-shrink-0 bg-white p-1.5 sm:p-2 rounded-full mt-0.5 sm:mt-1">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-gray-900" />
+              <div key={index} className="flex">
+                <div className="flex-shrink-0 mt-0.5">
+                  <Check className="h-5 w-5 text-gray-900" />
                 </div>
-                <p className="text-sm sm:text-base text-gray-600">{item}</p>
+                <p className="text-sm sm:text-base text-gray-600 ml-3">
+                  {item}
+                </p>
               </div>
             ))}
           </div>
@@ -203,11 +164,10 @@ export default function LegacyPlanning() {
 
       {/* Call to Action Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#f9f7f4]">
-        <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-relaxed mb-8">
-            Legacy is not only what you pass on —{" "}
-            <br className="hidden sm:inline" />
-            it's what you protect while you lead.
+            Legacy is not only what you pass on — it's what you protect while
+            you lead.
           </h2>
           <p className="text-lg sm:text-xl text-gray-700">
             IPRIVE Global Private Wealth, backed by the trusted 25-year heritage

@@ -1,13 +1,18 @@
-"use client"
+"use client";
 
-import { Check, MapPin, Phone, Mail } from "lucide-react"
+import { Check, MapPin, Phone, Mail } from "lucide-react";
 
 export default function ContactUs() {
   const offices = [
     {
       name: "India Office",
-      icon: <MapPin className="w-5 h-5 text-[oklch(0.257_0.09_281.288)] mt-1" />,
-      details: ["1617 & 1618, Level 16, Emaar Digital Greens", "Sector 61, Gurugram 122002, Haryana"],
+      icon: (
+        <MapPin className="w-5 h-5 text-[oklch(0.257_0.09_281.288)] mt-1" />
+      ),
+      details: [
+        "1617 & 1618, Level 16, Emaar Digital Greens",
+        "Sector 61, Gurugram 122002, Haryana",
+      ],
       mapUrl:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.073981346786!2d77.0918133150786!3d28.44985898248704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18f5f5e5e5e5%3A0x5e5e5e5e5e5e5e5!2sEmaar%20Digital%20Greens%2C%20Sector%2061%2C%20Gurugram%2C%20Haryana%20122002!5e0!3m2!1sen!2sin",
       phone: "+919810336644",
@@ -15,20 +20,31 @@ export default function ContactUs() {
     },
     {
       name: "Dubai Office",
-      icon: <MapPin className="w-5 h-5 text-[oklch(0.257_0.09_281.288)] mt-1" />,
-      details: ["Level 41, Jumeirah Emirates Towers", "Sheikh Zayed Road, Dubai"],
+      icon: (
+        <MapPin className="w-5 h-5 text-[oklch(0.257_0.09_281.288)] mt-1" />
+      ),
+      details: [
+        "Level 41, Jumeirah Emirates Towers",
+        "Sheikh Zayed Road, Dubai",
+      ],
       mapUrl:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.8673777212776!2d55.2819124!3d25.2178236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4292f9132cbd%3A0x653a96f2ced0a490!2sJumeirah%20Emirates%20Towers!5e0!3m2!1sen!2sae!4v1711162000000!5m2!1sen!2sae",
       phone: "+919810336644",
       email: "care@itrustmore.com",
     },
-  ]
+  ];
 
   return (
     <main className="bg-white">
       {/* Hero Video Section */}
       <section className="relative h-screen md:h-[110vh] min-h-[500px] md:min-h-[700px] overflow-hidden">
-        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
           <source src="/contact.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -55,12 +71,14 @@ export default function ContactUs() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="space-y-4 sm:space-y-6">
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                At iPrive, we are committed to providing seamless, secure, and efficient payment solutions to help you
-                confidently manage your transactions. Whether you're buying, selling, or transferring funds, we are here
-                to support you every step of the way.
+                At IPRIVE, we are committed to providing seamless, secure, and
+                efficient payment solutions to help you confidently manage your
+                transactions. Whether you're buying, selling, or transferring
+                funds, we are here to support you every step of the way.
               </p>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                We look forward to hearing from you and helping you make the most of our secure payment services.
+                We look forward to hearing from you and helping you make the
+                most of our secure payment services.
               </p>
             </div>
           </div>
@@ -77,14 +95,16 @@ export default function ContactUs() {
 
             <div className="max-w-3xl mx-auto space-y-6">
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Everyone likes to be paid on agreed time. Yet, the litigation with regards to delayed payments is one of
-                the highest in India.
+                Everyone likes to be paid on agreed time. Yet, the litigation
+                with regards to delayed payments is one of the highest in India.
               </p>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Escrow services have become an essential component of modern business transactions, especially in
-                industries where trust and security are paramount. With the rise of digital payments, online
-                marketplaces, domestic & international trade, buyers and sellers are increasingly seeking reliable ways
-                to protect their interests and ensure fair transactions.
+                Escrow services have become an essential component of modern
+                business transactions, especially in industries where trust and
+                security are paramount. With the rise of digital payments,
+                online marketplaces, domestic & international trade, buyers and
+                sellers are increasingly seeking reliable ways to protect their
+                interests and ensure fair transactions.
               </p>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-medium">
                 Here are some key insights into the escrow payment industry:
@@ -109,9 +129,16 @@ export default function ContactUs() {
                     "E-commerce has surged, with billions of transactions taking place online each day. Escrow services are crucial in providing a safe environment for buyers and sellers who may be transacting for the first time.",
                 },
               ].map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600">{item.content}</p>
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-gray-600">
+                    {item.content}
+                  </p>
                 </div>
               ))}
             </div>
@@ -129,7 +156,8 @@ export default function ContactUs() {
 
             <div className="max-w-3xl mx-auto text-center mb-12">
               <p className="text-base sm:text-lg text-gray-600">
-                At iPrive, we don't just follow industry standards – we set them.
+                At IPRIVE, we don't just follow industry standards – we set
+                them.
               </p>
             </div>
 
@@ -157,8 +185,12 @@ export default function ContactUs() {
                       <Check className="h-5 w-5 text-gray-900" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">{item.title}</h3>
-                      <p className="text-sm text-gray-600 mt-1">{item.content}</p>
+                      <h3 className="text-lg font-medium text-gray-900">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        {item.content}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -174,12 +206,12 @@ export default function ContactUs() {
                   {
                     title: "Integration and Flexibility",
                     content:
-                      "iPrive integrates seamlessly with your existing platform or marketplace via APIs, ensuring you can provide escrow services without disrupting your current operations. Plus, we offer customizable dashboard login solutions to meet your unique needs.",
+                      "IPRIVE integrates seamlessly with your existing platform or marketplace via APIs, ensuring you can provide escrow services without disrupting your current operations. Plus, we offer customizable dashboard login solutions to meet your unique needs.",
                   },
                   {
                     title: "Unmatched Speed - Go live faster than ever",
                     content:
-                      "iPrive ensures faster, transactions with real-time tracking, giving businesses complete peace of mind.",
+                      "IPRIVE ensures faster, transactions with real-time tracking, giving businesses complete peace of mind.",
                   },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4">
@@ -187,8 +219,12 @@ export default function ContactUs() {
                       <Check className="h-5 w-5 text-gray-900" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">{item.title}</h3>
-                      <p className="text-sm text-gray-600 mt-1">{item.content}</p>
+                      <h3 className="text-lg font-medium text-gray-900">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        {item.content}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -197,12 +233,14 @@ export default function ContactUs() {
 
             <div className="max-w-3xl mx-auto text-center mt-12">
               <p className="text-base sm:text-lg text-gray-600 mb-6">
-                When it comes to secure, fast, and efficient escrow services, iPrive is the clear choice. We're not just
-                a payment processor; we're your trusted partner in every transaction.
+                When it comes to secure, fast, and efficient escrow services,
+                IPRIVE is the clear choice. We're not just a payment processor;
+                we're your trusted partner in every transaction.
               </p>
               <p className="text-base sm:text-lg font-medium text-gray-900">
-                Ready to elevate your transaction security? Reach out to us now, and let's discuss how we can help you
-                build trust with your customers and streamline your payment processes.
+                Ready to elevate your transaction security? Reach out to us now,
+                and let's discuss how we can help you build trust with your
+                customers and streamline your payment processes.
               </p>
             </div>
           </div>
@@ -216,12 +254,17 @@ export default function ContactUs() {
             <div className="flex flex-col lg:flex-row gap-12">
               {/* Contact Form - Left Side */}
               <div className="lg:w-1/2">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
+                  Send Us a Message
+                </h2>
 
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
                         Full Name
                       </label>
                       <input
@@ -234,7 +277,10 @@ export default function ContactUs() {
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
                         Email Address
                       </label>
                       <input
@@ -248,7 +294,10 @@ export default function ContactUs() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Phone Number
                     </label>
                     <input
@@ -260,7 +309,10 @@ export default function ContactUs() {
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Company Name
                     </label>
                     <input
@@ -272,7 +324,10 @@ export default function ContactUs() {
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Subject
                     </label>
                     <select
@@ -284,12 +339,17 @@ export default function ContactUs() {
                       <option value="general">General Inquiry</option>
                       <option value="sales">Sales Inquiry</option>
                       <option value="support">Technical Support</option>
-                      <option value="partnership">Partnership Opportunity</option>
+                      <option value="partnership">
+                        Partnership Opportunity
+                      </option>
                     </select>
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Message
                     </label>
                     <textarea
@@ -312,12 +372,16 @@ export default function ContactUs() {
 
               {/* Office Information - Right Side */}
               <div className="lg:w-1/2 space-y-8 sticky top-8">
-                <h2 className="text-[oklch(0.257_0.09_281.288)] font-bold text-2xl mb-6">Our Offices</h2>
+                <h2 className="text-[oklch(0.257_0.09_281.288)] font-bold text-2xl mb-6">
+                  Our Offices
+                </h2>
 
                 {offices.map((office, index) => (
                   <div key={index} className="space-y-4">
                     <div className="bg-white p-6 rounded-xl border border-[oklch(0.257_0.09_281.288)/0.2] shadow-sm">
-                      <h3 className="text-xl font-bold text-[oklch(0.257_0.09_281.288)] mb-4">{office.name}</h3>
+                      <h3 className="text-xl font-bold text-[oklch(0.257_0.09_281.288)] mb-4">
+                        {office.name}
+                      </h3>
                       <div className="space-y-4">
                         <div className="flex items-start">
                           {office.icon}
@@ -331,13 +395,19 @@ export default function ContactUs() {
                         </div>
                         <div className="flex items-center">
                           <Phone className="w-5 h-5 text-[oklch(0.257_0.09_281.288)] mr-2" />
-                          <a href={`tel:${office.phone}`} className="text-gray-600 hover:text-blue-600">
+                          <a
+                            href={`tel:${office.phone}`}
+                            className="text-gray-600 hover:text-blue-600"
+                          >
                             {office.phone}
                           </a>
                         </div>
                         <div className="flex items-center">
                           <Mail className="w-5 h-5 text-[oklch(0.257_0.09_281.288)] mr-2" />
-                          <a href={`mailto:${office.email}`} className="text-gray-600 hover:text-blue-600">
+                          <a
+                            href={`mailto:${office.email}`}
+                            className="text-gray-600 hover:text-blue-600"
+                          >
                             {office.email}
                           </a>
                         </div>
@@ -360,5 +430,5 @@ export default function ContactUs() {
         </div>
       </section>
     </main>
-  )
+  );
 }

@@ -4,12 +4,12 @@ import Link from "next/link";
 
 import {
   Check,
-  TrendingUp,
+  Building,
+  Home as HomeIcon,
+  Globe,
   BarChart2,
-  Users,
-  Search,
-  Layers,
-  Briefcase,
+  Award,
+  CreditCard,
 } from "lucide-react";
 
 export default function StartupVentureCapitalAdvisory() {
@@ -48,7 +48,7 @@ export default function StartupVentureCapitalAdvisory() {
 
       {/* Introduction Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
             Startup & Venture Capital Investment Advisory
           </h2>
@@ -71,7 +71,7 @@ export default function StartupVentureCapitalAdvisory() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Completely aligned boxes with fixed height headings */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
@@ -80,86 +80,54 @@ export default function StartupVentureCapitalAdvisory() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <TrendingUp className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Curated Startup Deal Flow
-                  </h3>
+              {/* Each service box with guaranteed consistent alignment */}
+              {[
+                {
+                  icon: <HomeIcon className="h-6 w-6 text-black" />,
+                  title: "Curated Startup Deal Flow",
+                  desc: "Access a handpicked portfolio of early-stage, growth-stage, and pre-IPO ventures across sectors such as Fintech, Healthtech, AI, SaaS, Clean Energy, and Consumer Brands — vetted for scalability, innovation, and investment readiness.",
+                },
+                {
+                  icon: <Building className="h-6 w-6 text-black" />,
+                  title: "Venture Capital Fund Access",
+                  desc: "Participate in exclusive, globally managed venture funds and alternative investment vehicles through our partner network, offering exposure to high-potential startup ecosystems in Silicon Valley, Singapore, London, Dubai, and Mumbai.",
+                },
+                {
+                  icon: <Globe className="h-6 w-6 text-black" />,
+                  title: "Private Syndication & Co-Investment Models",
+                  desc: "Collaborate with other UHNW investors and family offices through exclusive private syndication platforms and co-investment opportunities, allowing shared expertise, reduced risk, and enhanced returns.",
+                },
+                {
+                  icon: <Award className="h-6 w-6 text-black" />,
+                  title: "Portfolio Structuring & Exit Planning",
+                  desc: "Receive comprehensive investment structuring, risk management, and exit strategy planning, including secondary sales, strategic buyouts, and IPO preparation — ensuring liquidity options and maximizing capital appreciation.",
+                },
+                {
+                  icon: <BarChart2 className="h-6 w-6 text-black" />,
+                  title: "Startup Due Diligence & Valuation Support",
+                  desc: "Benefit from in-depth financial, legal, and operational due diligence services powered by our proprietary evaluation models and partnerships with global legal, compliance, and valuation experts.",
+                },
+              ].map((service, index) => (
+                <div key={index} className="p-4 bg-[#f9f7f4] rounded-lg h-full">
+                  <div className="flex">
+                    <div className="flex-shrink-0 mt-0">{service.icon}</div>
+                    <div className="ml-3 flex-1">
+                      <div className="h-16 flex items-start">
+                        <h3 className="text-lg font-medium text-gray-800">
+                          {service.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-800 text-sm">{service.desc}</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-800 text-sm">
-                  Access a handpicked portfolio of early-stage, growth-stage,
-                  and pre-IPO ventures across sectors such as Fintech,
-                  Healthtech, AI, SaaS, Clean Energy, and Consumer Brands —
-                  vetted for scalability, innovation, and investment readiness.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Briefcase className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Venture Capital Fund Access
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Participate in exclusive, globally managed venture funds and
-                  alternative investment vehicles through our partner network,
-                  offering exposure to high-potential startup ecosystems in
-                  Silicon Valley, Singapore, London, Dubai, and Mumbai.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Users className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Private Syndication & Co-Investment Models
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Collaborate with other UHNW investors and family offices
-                  through exclusive private syndication platforms and
-                  co-investment opportunities, allowing shared expertise,
-                  reduced risk, and enhanced returns.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Layers className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Portfolio Structuring & Exit Planning
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Receive comprehensive investment structuring, risk management,
-                  and exit strategy planning, including secondary sales,
-                  strategic buyouts, and IPO preparation — ensuring liquidity
-                  options and maximizing capital appreciation.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Search className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Startup Due Diligence & Valuation Support
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Benefit from in-depth financial, legal, and operational due
-                  diligence services powered by our proprietary evaluation
-                  models and partnerships with global legal, compliance, and
-                  valuation experts.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Section */}
+      {/* Why Choose Section - With properly aligned checkmarks */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
@@ -175,11 +143,13 @@ export default function StartupVentureCapitalAdvisory() {
               "Strong Focus on Aligned, Impactful, and High-Growth Ventures",
               "Dedicated Private Investment Desk for Families, Boards & HNWIs",
             ].map((item, index) => (
-              <div key={index} className="flex items-start gap-3 sm:gap-4">
-                <div className="flex-shrink-0 bg-white p-1.5 sm:p-2 rounded-full mt-0.5 sm:mt-1">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-gray-900" />
+              <div key={index} className="flex">
+                <div className="flex-shrink-0 mt-0.5">
+                  <Check className="h-5 w-5 text-gray-900" />
                 </div>
-                <p className="text-sm sm:text-base text-gray-600">{item}</p>
+                <p className="text-sm sm:text-base text-gray-600 ml-3">
+                  {item}
+                </p>
               </div>
             ))}
           </div>
@@ -188,7 +158,7 @@ export default function StartupVentureCapitalAdvisory() {
 
       {/* Call to Action Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#f9f7f4]">
-        <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-relaxed mb-8">
             Because the next unicorn, market disruptor,{" "}
             <br className="hidden sm:inline" />

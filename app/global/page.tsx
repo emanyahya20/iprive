@@ -47,12 +47,14 @@ export default function GlobalRealEstateAdvisory() {
 
       {/* Introduction Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
+          {" "}
+          {/* changed max-w-3xl to max-w-7xl */}
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
             Global Real Estate Advisory
           </h2>
           <div className="space-y-4 sm:space-y-6">
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mx-auto">
               At IPRIVE, we understand that for the world's elite, real estate
               is far more than an asset class — it's a statement of success, a
               store of legacy, and a foundation for global presence.
@@ -69,7 +71,7 @@ export default function GlobalRealEstateAdvisory() {
         </div>
       </section>
 
-      {/* Services Section - Matching the design from Wealth Management */}
+      {/* Services Section - Completely aligned boxes with fixed height headings */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
@@ -78,94 +80,59 @@ export default function GlobalRealEstateAdvisory() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <HomeIcon className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Prime Residential Investments
-                  </h3>
+              {/* Each service box with guaranteed consistent alignment */}
+              {[
+                {
+                  icon: <HomeIcon className="h-6 w-6 text-black" />,
+                  title: "Prime Residential Investments",
+                  desc: "Acquire luxury homes, penthouses, villas, and estates in the world's most desirable destinations — from London, Dubai, New York, Monaco, Singapore, to Mumbai.",
+                },
+                {
+                  icon: <Building className="h-6 w-6 text-black" />,
+                  title: "Commercial and Institutional-Grade Assets",
+                  desc: "Invest in high-value commercial properties including office spaces, retail, hospitality, and mixed-use developments across global financial hubs.",
+                },
+                {
+                  icon: <Globe className="h-6 w-6 text-black" />,
+                  title: "Lifestyle & Holiday Homes",
+                  desc: "Own tranquil retreats in picturesque destinations — from beachfront villas in the Maldives to vineyard estates in Tuscany.",
+                },
+                {
+                  icon: <Award className="h-6 w-6 text-black" />,
+                  title: "Trophy & Landmark Properties",
+                  desc: "Access heritage estates, landmark mansions, private islands, and historical properties that hold generational value.",
+                },
+                {
+                  icon: <BarChart2 className="h-6 w-6 text-black" />,
+                  title: "Portfolio Diversification & Advisory",
+                  desc: "Structure your global real estate portfolio, balancing risk and return, aligned with your wealth, tax, and estate planning objectives.",
+                },
+                {
+                  icon: <CreditCard className="h-6 w-6 text-black" />,
+                  title: "Cross-Border Transaction Support",
+                  desc: "Simplify complex international acquisitions with end-to-end support for seamless, tax-efficient, and confidential transactions.",
+                },
+              ].map((service, index) => (
+                <div key={index} className="p-4 bg-[#f9f7f4] rounded-lg h-full">
+                  <div className="flex">
+                    <div className="flex-shrink-0 mt-0">{service.icon}</div>
+                    <div className="ml-3 flex-1">
+                      <div className="h-16 flex items-start">
+                        <h3 className="text-lg font-medium text-gray-800">
+                          {service.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-800 text-sm">{service.desc}</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-800 text-sm">
-                  Acquire luxury homes, penthouses, villas, and estates in the
-                  world's most desirable destinations — from London, Dubai, New
-                  York, Monaco, Singapore, to Mumbai.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Building className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Commercial and Institutional-Grade Assets
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Invest in high-value commercial properties including office
-                  spaces, retail, hospitality, and mixed-use developments across
-                  global financial hubs.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Globe className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Lifestyle & Holiday Homes
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Own tranquil retreats in picturesque destinations — from
-                  beachfront villas in the Maldives to vineyard estates in
-                  Tuscany.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <Award className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Trophy & Landmark Properties
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Access heritage estates, landmark mansions, private islands,
-                  and historical properties that hold generational value.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <BarChart2 className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Portfolio Diversification & Advisory
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Structure your global real estate portfolio, balancing risk
-                  and return, aligned with your wealth, tax, and estate planning
-                  objectives.
-                </p>
-              </div>
-
-              <div className="p-4 bg-[#f9f7f4] rounded-lg">
-                <div className="flex items-center mb-2">
-                  <CreditCard className="h-5 w-5 text-black mr-2" />
-                  <h3 className="text-lg font-medium text-gray-800">
-                    Cross-Border Transaction Support
-                  </h3>
-                </div>
-                <p className="text-gray-800 text-sm">
-                  Simplify complex international acquisitions with end-to-end
-                  support for seamless, tax-efficient, and confidential
-                  transactions.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Section */}
+      {/* Why Choose Section - With properly aligned checkmarks */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
@@ -181,11 +148,13 @@ export default function GlobalRealEstateAdvisory() {
               "On-Ground Expertise in Key Global Markets",
               "Legacy Asset Curation and Portfolio Advisory",
             ].map((item, index) => (
-              <div key={index} className="flex items-start gap-3 sm:gap-4">
-                <div className="flex-shrink-0 bg-white p-1.5 sm:p-2 rounded-full mt-0.5 sm:mt-1">
-                  <Check className="h-4 w-4 sm:h-5 sm:w-5 text-gray-900" />
+              <div key={index} className="flex">
+                <div className="flex-shrink-0 mt-0.5">
+                  <Check className="h-5 w-5 text-gray-900" />
                 </div>
-                <p className="text-sm sm:text-base text-gray-600">{item}</p>
+                <p className="text-sm sm:text-base text-gray-600 ml-3">
+                  {item}
+                </p>
               </div>
             ))}
           </div>
@@ -194,7 +163,7 @@ export default function GlobalRealEstateAdvisory() {
 
       {/* Call to Action Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#f9f7f4]">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
             Let us open doors to the world's most remarkable addresses,
             exclusively for you.

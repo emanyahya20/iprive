@@ -42,6 +42,7 @@ export default function ServicesTabs() {
         title: "Global Real Estate Advisory",
         description:
           "Access prime, off-market, and trophy properties across major financial capitals, emerging markets, and lifestyle destinations. From London penthouses to Dubai waterfront estates — curated for discerning investors seeking returns and prestige.",
+        path: "/global",
       },
       {
         icon: (
@@ -64,6 +65,7 @@ export default function ServicesTabs() {
         title: "High-Value Private Investments",
         description:
           "We unlock exclusive access to direct private equity deals, structured products, luxury asset investments, and rare opportunities typically reserved for institutional players. Invest beyond the ordinary, with risk-managed strategies tailored to your ambitions.",
+        path: "/private",
       },
       {
         icon: (
@@ -86,6 +88,7 @@ export default function ServicesTabs() {
         title: "Trust Formation & Legacy Planning",
         description:
           "Preserve and protect your wealth for generations with our expert trust structures, estate planning services, and family office solutions. Confidential, compliant, and crafted with absolute care for your family's future.",
+        path: "/trust",
       },
       {
         icon: (
@@ -112,6 +115,7 @@ export default function ServicesTabs() {
         title: "Startup & Venture Capital Investments",
         description:
           "Participate in tomorrow's breakthroughs. From pre-IPO opportunities to disruptive tech ventures, our global network connects you with carefully vetted high-growth businesses poised to redefine industries.",
+        path: "/startup",
       },
       {
         icon: (
@@ -138,6 +142,7 @@ export default function ServicesTabs() {
         title: "Citizenship & Global Mobility Solutions",
         description:
           "Enhance your global footprint through strategic citizenship, residency, and second passport programs. Benefit from smoother cross-border movement, tax efficiencies, and enhanced financial security for your family.",
+        path: "/citizenship",
       },
       {
         icon: (
@@ -161,6 +166,7 @@ export default function ServicesTabs() {
         title: "Trump Gold Card Advisory",
         description:
           "A distinctive program for ultra-high-net-worth individuals seeking unmatched privileges — from curated experiences to personal concierge banking and strategic access to top-tier financial and luxury services worldwide.",
+        path: "/trump",
       },
     ],
     [
@@ -187,6 +193,7 @@ export default function ServicesTabs() {
         title: "Global Real Estate Advisory",
         description:
           "Access prime, off-market, and trophy properties across major financial capitals, emerging markets, and lifestyle destinations. From London penthouses to Dubai waterfront estates — curated for discerning investors seeking returns and prestige.",
+        path: "/global",
       },
       {
         icon: (
@@ -209,6 +216,7 @@ export default function ServicesTabs() {
         title: "High-Value Private Investments",
         description:
           "We unlock exclusive access to direct private equity deals, structured products, luxury asset investments, and rare opportunities typically reserved for institutional players. Invest beyond the ordinary, with risk-managed strategies tailored to your ambitions.",
+        path: "/private",
       },
       {
         icon: (
@@ -231,6 +239,7 @@ export default function ServicesTabs() {
         title: "Trust Formation & Legacy Planning",
         description:
           "Preserve and protect your wealth for generations with our expert trust structures, estate planning services, and family office solutions. Confidential, compliant, and crafted with absolute care for your family's future.",
+        path: "/trust",
       },
       {
         icon: (
@@ -257,6 +266,7 @@ export default function ServicesTabs() {
         title: "Startup & Venture Capital Investments",
         description:
           "Participate in tomorrow's breakthroughs. From pre-IPO opportunities to disruptive tech ventures, our global network connects you with carefully vetted high-growth businesses poised to redefine industries.",
+        path: "/startup",
       },
       {
         icon: (
@@ -283,6 +293,7 @@ export default function ServicesTabs() {
         title: "Citizenship & Global Mobility Solutions",
         description:
           "Enhance your global footprint through strategic citizenship, residency, and second passport programs. Benefit from smoother cross-border movement, tax efficiencies, and enhanced financial security for your family.",
+        path: "/citizenship",
       },
       {
         icon: (
@@ -306,6 +317,7 @@ export default function ServicesTabs() {
         title: "Trump Gold Card Advisory",
         description:
           "A distinctive program for ultra-high-net-worth individuals seeking unmatched privileges — from curated experiences to personal concierge banking and strategic access to top-tier financial and luxury services worldwide.",
+        path: "/trump",
       },
       {
         icon: (
@@ -328,9 +340,10 @@ export default function ServicesTabs() {
             <path d="M16 14h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1" />
           </svg>
         ),
-        title: "Jumbo Investment & Wealth Structuring",
+        title: "Legacy Planning & Wealth Structuring",
         description:
-          "For complex, multi-million-dollar portfolios, we offer bespoke jumbo investment mandates, family office setups, and multi-asset structuring strategies — built on discretion, governance, and performance.",
+          "For complex, multi-million-dollar portfolios, we offer bespoke Legacy Planning mandates, family office setups, and multi-asset structuring strategies — built on discretion, governance, and performance.",
+        path: "/jumbo",
       },
     ],
   ];
@@ -347,107 +360,54 @@ export default function ServicesTabs() {
           </p>
         </div>
 
-        {/* Tabs */}
+        {/* Tabs - Fixed the underline width */}
         <div className="flex flex-col md:flex-row border-b border-gray-200 mb-12">
           {tabs.map((tab, index) => (
-            <button
-              key={index}
-              className={`flex-1 pb-4 text-left ${
-                activeTab === index
-                  ? "border-b-2 border-[oklch(0.257_0.09_281.288)]"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
-              onClick={() => setActiveTab(index)}
-            >
-              <div className="text-sm text-gray-500 mb-1">{tab.id}</div>
-              <div
-                className={`text-xl font-semibold ${
-                  activeTab === index ? "text-gray-900" : "text-gray-500"
+            <div key={index} className="flex-1 flex flex-col items-start">
+              <button
+                className={`pb-4 text-left ${
+                  activeTab === index
+                    ? "border-b-2 border-[oklch(0.257_0.09_281.288)]"
+                    : "text-gray-500 hover:text-gray-700"
                 }`}
+                onClick={() => setActiveTab(index)}
               >
-                {tab.title}
-              </div>
-            </button>
+                <div className="text-sm text-gray-500 mb-1">{tab.id}</div>
+                <div
+                  className={`text-xl font-semibold ${
+                    activeTab === index ? "text-gray-900" : "text-gray-500"
+                  }`}
+                >
+                  {tab.title}
+                </div>
+              </button>
+            </div>
           ))}
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid - With consistently aligned "Learn more" links */}
         <div className="grid md:grid-cols-3 gap-8">
           {services[activeTab].map((service, index) => (
-            <div key={index} className="border-t border-gray-200 pt-8">
+            <div
+              key={index}
+              className="border-t border-gray-200 pt-8 flex flex-col h-full"
+            >
               <div className="mb-4">{service.icon}</div>
               <h3 className="text-sm font-semibold text-gray-900 mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-600 mb-6">{service.description}</p>
+              <p className="text-gray-600 mb-6 flex-grow">
+                {service.description}
+              </p>
 
-              {/* Link component structure for easy replacement later */}
-              {service.title === "Global Real Estate Advisory" ? (
-                <Link
-                  href="/global"
-                  className="inline-flex items-center text-[oklch(0.257_0.09_281.288)] hover:text-[oklch(0.257_0.09_281.288)/80] font-medium text-sm"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              ) : service.title === "High-Value Private Investments" ? (
-                <Link
-                  href="/private"
-                  className="inline-flex items-center text-[oklch(0.257_0.09_281.288)] hover:text-[oklch(0.257_0.09_281.288)/80] font-medium text-sm"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              ) : service.title === "Trust Formation & Legacy Planning" ? (
-                <Link
-                  href="/trust"
-                  className="inline-flex items-center text-[oklch(0.257_0.09_281.288)] hover:text-[oklch(0.257_0.09_281.288)/80] font-medium text-sm"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              ) : service.title === "Startup & Venture Capital Investments" ? (
-                <Link
-                  href="/startup"
-                  className="inline-flex items-center text-[oklch(0.257_0.09_281.288)] hover:text-[oklch(0.257_0.09_281.288)/80] font-medium text-sm"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              ) : service.title ===
-                "Citizenship & Global Mobility Solutions" ? (
-                <Link
-                  href="/citizenship"
-                  className="inline-flex items-center text-[oklch(0.257_0.09_281.288)] hover:text-[oklch(0.257_0.09_281.288)/80] font-medium text-sm"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              ) : service.title === "Trump Gold Card Advisory" ? (
-                <Link
-                  href="/trump"
-                  className="inline-flex items-center text-[oklch(0.257_0.09_281.288)] hover:text-[oklch(0.257_0.09_281.288)/80] font-medium text-sm"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              ) : service.title === "Jumbo Investment & Wealth Structuring" ? (
-                <Link
-                  href="/jumbo"
-                  className="inline-flex items-center text-[oklch(0.257_0.09_281.288)] hover:text-[oklch(0.257_0.09_281.288)/80] font-medium text-sm"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              ) : (
-                <Link
-                  href={getServicePath(service.title)}
-                  className="inline-flex items-center text-[oklch(0.257_0.09_281.288)] hover:text-[oklch(0.257_0.09_281.288)/80] font-medium text-sm"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              )}
+              {/* Link at the bottom, consistently aligned */}
+              <Link
+                href={service.path || getServicePath(service.title)}
+                className="inline-flex items-center text-[oklch(0.257_0.09_281.288)] hover:text-[oklch(0.257_0.09_281.288)/80] font-medium text-sm mt-auto"
+              >
+                Learn more
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           ))}
         </div>

@@ -41,11 +41,10 @@ export default function Footer() {
             {/* Company Description - Keep this text */}
             <div className="mb-4">
               <p className="text-xs text-gray-700 leading-tight">
-                Trustmore Group is a global, technology-led financial
-                powerhouse, managing wealth, payments, and exclusive
-                experiences. Built on a foundation of trust, transparency, and
-                innovation since 2001. Trustmore empowers you to do more, grow
-                more, and live more.
+                Where Generations Prosper. Where Legacies Endure. Exclusively
+                Curated for the World's Most Discerning Families.
+                <br />
+                [Powered by Trustmore Group – 25 Years of Heritage]
               </p>
             </div>
 
@@ -163,7 +162,73 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Trustmore Group Sites Section (Before Quick Links) */}
+          {/* Helpful Links Section (Now in second position) */}
+          <div className="md:ml-4">
+            <h3 className="text-base font-bold text-gray-900 mb-2">
+              Helpful Links
+            </h3>
+            <ul className="space-y-1">
+              {[
+                { href: "/global", label: "Global Real Estate Advisory" },
+                { href: "/private", label: "High-Value Private Investments" },
+                { href: "/trust", label: "Trust Formation & Legacy Planning" },
+                {
+                  href: "/startup",
+                  label: "Startup & Venture Capital Investments",
+                },
+                {
+                  href: "/citizenship",
+                  label: "Citizenship & Global Mobility Solutions",
+                },
+                { href: "/trump", label: "Trump Gold Card Advisory" },
+                {
+                  href: "/jumbo",
+                  label: "Legacy Planning & Wealth Structuring",
+                },
+              ].map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={`font-medium text-sm ${
+                      pathname === href ? "text-black" : "text-gray-700"
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Quick Links Section (First Half) */}
+          <div className="md:ml-4">
+            <h3 className="text-base font-bold text-gray-900 mb-2">
+              Quick Links
+            </h3>
+            <ul className="space-y-1">
+              {[
+                { href: "/", label: "Home" },
+                { href: "/about", label: "About" },
+                { href: "/team", label: "Team" },
+
+                { href: "/knowledge-center", label: "Knowledge Center" },
+                { href: "/contact", label: "Contact" },
+              ].map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={`font-medium text-sm ${
+                      pathname === href ? "text-black" : "text-gray-700"
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Trustmore Group Sites Section (Now in fourth position) */}
           <div className="md:ml-4">
             <h3 className="text-base font-bold text-gray-900 mb-2">
               Trustmore Group Sites
@@ -219,72 +284,6 @@ export default function Footer() {
                   VIAJETS
                 </a>
               </li>
-            </ul>
-          </div>
-
-          {/* Quick Links Section (First Half) */}
-          <div className="md:ml-4">
-            <h3 className="text-base font-bold text-gray-900 mb-2">
-              Quick Links
-            </h3>
-            <ul className="space-y-1">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/about", label: "About" },
-                { href: "/team", label: "Team" },
-                { href: "/media", label: "Media" },
-                { href: "/knowledge-center", label: "Knowledge Center" },
-                { href: "/contact", label: "Contact" },
-              ].map(({ href, label }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className={`font-medium text-sm ${
-                      pathname === href ? "text-black" : "text-gray-700"
-                    }`}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Quick Links Section (Second Half) */}
-          <div className="md:ml-4">
-            <h3 className="text-base font-bold text-gray-900 mb-2">
-              Helpful Links
-            </h3>
-            <ul className="space-y-1">
-              {[
-                { href: "/global", label: "Global Real Estate Advisory" },
-                { href: "/private", label: "High-Value Private Investments" },
-                { href: "/trust", label: "Trust Formation & Legacy Planning" },
-                {
-                  href: "/startup",
-                  label: "Startup & Venture Capital Investments",
-                },
-                {
-                  href: "/citizenship",
-                  label: "Citizenship & Global Mobility Solutions",
-                },
-                { href: "/trump", label: "Trump Gold Card Advisory" },
-                {
-                  href: "/jumbo",
-                  label: "Jumbo Investment & Wealth Structuring",
-                },
-              ].map(({ href, label }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className={`font-medium text-sm ${
-                      pathname === href ? "text-black" : "text-gray-700"
-                    }`}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
             </ul>
           </div>
         </div>

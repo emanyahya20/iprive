@@ -24,9 +24,9 @@ export default function TeamPage() {
             <div className="w-full max-w-4xl mx-auto lg:mx-0">
               <div className="text-center lg:text-left px-2 sm:px-0">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-                  <span className="block">Our Leadership</span>
+                  <span className="block">Our Team</span>
                   <span className="block text-2xl sm:text-3xl md:text-4xl font-medium mt-3 sm:mt-4 text-white [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-                    Part of a Global Financial Powerhouse
+                    Your Trusted Partner in Wealth Management
                   </span>
                 </h1>
               </div>
@@ -39,29 +39,43 @@ export default function TeamPage() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
-            At Escrowpay, we are backed by the strength and expertise of
-            Trustmore Group
+            Behind IPRIVE is a team of seasoned wealth advisors, investment
+            strategists, and legal experts
           </h2>
           <div className="space-y-6">
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              A leading global services group in wealth management, private
-              aviation, and financial services. Our team operates with the same
-              level of precision, discretion, and excellence that defines the
-              Trustmore Group legacy.
+              Every IPRIVE advisor brings decades of experience from the top
+              global banks, private equity firms, and international family
+              offices — with one mission:{" "}
+              <strong>
+                to be your trusted partner in preserving, growing, and
+                protecting your wealth.
+              </strong>
             </p>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              We serve an elite clientele, ensuring seamless access to bespoke
-              financial solutions, exclusive investment opportunities, and
-              world-class service. Our leadership's strategic vision fuels
-              innovation across all our businesses, making us a trusted partner
-              for high-net-worth individuals and global enterprises.
+              Our team's combined expertise covers:
+            </p>
+            <ul className="list-disc pl-8 space-y-2 text-base sm:text-lg text-gray-600">
+              <li>Multi Jurisdictional wealth planning</li>
+              <li>Global real estate advisory</li>
+              <li>Private equity and venture investments</li>
+              <li>Trust and estate structuring</li>
+              <li>Citizenship and residency planning</li>
+            </ul>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              What sets us apart is not just our global knowledge, but the trust
+              we build with every client — for life, and beyond.
+            </p>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              We invite you to meet the people who bring the IPRIVE vision to
+              life.
             </p>
             <div className="flex justify-center mt-8">
               <Link
-                href="https://www.itrustmore.com"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800 bg-bg-white hover:bg-[#f9f7f4] transition-colors border border-gray-200"
+                href="https://itrustmore.com/about"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800 bg-white hover:bg-[#f9f7f4] transition-colors border border-gray-200"
               >
-                Discover the leadership behind our success
+                Learn more about our legacy through Trustmore Group
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
