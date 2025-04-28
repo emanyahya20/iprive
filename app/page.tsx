@@ -107,7 +107,7 @@ export default function Home() {
               </div>
               <div className="order-1 md:order-2">
                 <h2 className="text-4xl sm:text-5xl font-semibold mb-6 text-[oklch(0.257_0.09_281.288)] leading-tight">
-                  Why IPRIVE?
+                  Why IPRIVE Global?
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                   25-Year Trustmore Legacy of excellence, transparency, and

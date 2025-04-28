@@ -10,11 +10,12 @@ export default function ContactUs() {
         <MapPin className="w-5 h-5 text-[oklch(0.257_0.09_281.288)] mt-1" />
       ),
       details: [
-        "1617 & 1618, Level 16, Emaar Digital Greens",
-        "Sector 61, Gurugram 122002, Haryana",
+        "Ground Floor, 7A, Standard Chartered Tower",
+        "DLF Cyber City, DLF Phase 2, Sector 24",
+        "Gurugram, Haryana 122001",
       ],
       mapUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.073981346786!2d77.0918133150786!3d28.44985898248704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18f5f5e5e5e5%3A0x5e5e5e5e5e5e5e5!2sEmaar%20Digital%20Greens%2C%20Sector%2061%2C%20Gurugram%2C%20Haryana%20122002!5e0!3m2!1sen!2sin",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.942780899109!2d77.09392331507731!3d28.49624808250033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f8b13f1e0a5%3A0x9d3b6e5b6e5b6e5b!2sStandard%20Chartered%20Tower%2C%20DLF%20Cyber%20City%2C%20DLF%20Phase%202%2C%20Sector%2024%2C%20Gurugram%2C%20Haryana%20122001!5e0!3m2!1sen!2sin",
       phone: "+919810336644",
       email: "care@itrustmore.com",
     },

@@ -68,17 +68,14 @@ export default function TeamPage() {
             </p>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
               We invite you to meet the people who bring the IPRIVE vision to
-              life.
-            </p>
-            <div className="flex justify-center mt-8">
-              <Link
+              life. Learn more about our legacy through{" "}
+              <a
                 href="https://itrustmore.com/about"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800 bg-white hover:bg-[#f9f7f4] transition-colors border border-gray-200"
+                className="text-blue-600 hover:text-blue-800 hover:underline"
               >
-                Learn more about our legacy through Trustmore Group
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
+                Trustmore Group
+              </a>
+            </p>
           </div>
         </div>
       </section>

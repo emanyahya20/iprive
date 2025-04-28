@@ -59,29 +59,33 @@ export function Header() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
-          {/* Logos with explicit margin */}
-          <div className="flex items-center">
-            <Link href="/">
-              <Image
-                src="/ft01.png"
-                alt="Logo"
-                width={180}
-                height={50}
-                className="h-10 w-auto"
-              />
+          {/* Logos with adjusted size and position */}
+          <div className="flex items-center space-x-6">
+            <Link href="/" className="flex items-center relative">
+              <div className="relative -top-1">
+                <Image
+                  src="/ft01.png"
+                  alt="Logo"
+                  width={200}
+                  height={55}
+                  className="h-12 w-auto object-contain"
+                  priority
+                />
+              </div>
             </Link>
-            <div className="w-8"></div> {/* Explicit spacer element */}
             <a
               href="http://iTrustmore.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center h-10"
             >
               <Image
                 src="/ft2.png"
                 alt="Trustmore Logo"
                 width={180}
                 height={50}
-                className="h-10 w-auto"
+                className="h-10 w-auto object-contain"
+                priority
               />
             </a>
           </div>

@@ -33,7 +33,7 @@ export default function CitizenshipGlobalMobilitySolutions() {
             <div className="w-full max-w-4xl mx-auto lg:mx-0">
               <div className="text-center lg:text-left px-2 sm:px-0">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-                  <span className="block">Trump Gold Card Advisory</span>
+                  <span className="block">USA Gold Card Advisory</span>
                   <span className="block text-2xl sm:text-3xl md:text-4xl font-medium mt-3 sm:mt-4 text-white [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
                     Exclusive Access. Privileged Living.
                     <br />
@@ -50,13 +50,13 @@ export default function CitizenshipGlobalMobilitySolutions() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
-            Trump Gold Card Advisory
+            USA Gold Card Advisory
           </h2>
           <div className="space-y-4 sm:space-y-6">
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
               At IPRIVE Global Private Wealth, we believe wealth isn't just
               measured in numbers — it's expressed through access, influence,
-              and rare privileges reserved for the world's elite. The Trump Gold
+              and rare privileges reserved for the world's elite. The USA Gold
               Card Advisory is an exclusive, invitation-based service for our
               global clientele, offering bespoke wealth benefits, lifestyle
               privileges, and preferential opportunities under the distinguished
@@ -127,7 +127,7 @@ export default function CitizenshipGlobalMobilitySolutions() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
-            Why Choose IPRIVE Trump Gold Card Advisory?
+            Why Choose IPRIVE USA Gold Card Advisory?
           </h2>
 
           <div className="space-y-4">
@@ -158,7 +158,7 @@ export default function CitizenshipGlobalMobilitySolutions() {
             For the Few Who Lead the World.
           </h2>
           <p className="text-lg sm:text-xl text-gray-700">
-            Trump Advisory by IPRIVE is not just a membership — it's a statement
+            USA Advisory by IPRIVE is not just a membership — it's a statement
             of success, a passport to influence, and a gateway to a life lived
             at the highest standards of excellence.
           </p>

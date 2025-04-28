@@ -164,11 +164,10 @@ export default function HighValuePrivateInvestments() {
           </h2>
           <p className="text-lg sm:text-xl text-gray-700">
             For over 25 years, Trustmore Group has built a reputation for
-            integrity, discretion, and performance-driven advisory.
-            <br className="hidden sm:inline" />
-            At IPRIVE, we extend this legacy to the private investment space —
-            connecting you to a curated world of opportunities where capital
-            meets credibility.
+            integrity, discretion, and performance-driven advisory. At IPRIVE,
+            we extend this legacy to the private investment space — connecting
+            you to a curated world of opportunities where capital meets
+            credibility.
           </p>
           <div className="space-y-4 sm:space-y-6 mt-6">
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">

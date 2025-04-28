@@ -159,7 +159,7 @@ export default function CitizenshipGlobalMobilitySolutions() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#f9f7f4]">
         <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-relaxed mb-8">
-            Because your passport should be as limitless as your ambition.
+            Your passport should be as limitless as your ambition.
           </h2>
           <p className="text-lg sm:text-xl text-gray-700">
             Whether you seek global business expansion, secure asset relocation,

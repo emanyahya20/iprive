@@ -85,7 +85,7 @@ export default function ServicesTabs() {
             <circle cx="12" cy="7" r="4" />
           </svg>
         ),
-        title: "Trust Formation & Legacy Planning",
+        title: "Trust Formation",
         description:
           "Preserve and protect your wealth for generations with our expert trust structures, estate planning services, and family office solutions. Confidential, compliant, and crafted with absolute care for your family's future.",
         path: "/trust",
@@ -163,7 +163,7 @@ export default function ServicesTabs() {
             <path d="M12 8v8" />
           </svg>
         ),
-        title: "Trump Gold Card Advisory",
+        title: "USA Gold Card Advisory",
         description:
           "A distinctive program for ultra-high-net-worth individuals seeking unmatched privileges — from curated experiences to personal concierge banking and strategic access to top-tier financial and luxury services worldwide.",
         path: "/trump",
@@ -314,7 +314,7 @@ export default function ServicesTabs() {
             <path d="M12 8v8" />
           </svg>
         ),
-        title: "Trump Gold Card Advisory",
+        title: "USA Gold Card Advisory",
         description:
           "A distinctive program for ultra-high-net-worth individuals seeking unmatched privileges — from curated experiences to personal concierge banking and strategic access to top-tier financial and luxury services worldwide.",
         path: "/trump",

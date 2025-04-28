@@ -34,7 +34,7 @@ export default function LegacyPlanning() {
               <div className="text-center lg:text-left px-2 sm:px-0">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
                   <span className="block">
-                    Legacy Planning, Trust Formation & Executive Protection
+                    Trust Formation & Executive Protection
                   </span>
                   <span className="block text-2xl sm:text-3xl md:text-4xl font-medium mt-3 sm:mt-4 text-white [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
                     Preserving Wealth, Protecting Futures, and Securing
@@ -51,7 +51,7 @@ export default function LegacyPlanning() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
-            Legacy Planning, Trust Formation & Executive Protection
+            Trust Formation & Executive Protection
           </h2>
           <div className="space-y-4 sm:space-y-6">
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">

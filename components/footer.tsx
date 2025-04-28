@@ -15,17 +15,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            {/* Logo Stack - Trustmore logo and the golden logo (ft2.png) side by side */}
+            {/* Logo Stack - Adjusted positioning */}
             <div className="flex flex-row gap-3 mb-4 items-center">
-              {/* Trustmore logo clickable */}
-              <div className="h-12 w-auto">
-                <Link href="/">
-                  <img
-                    src="/ft01.png"
-                    alt="Trustmore Logo"
-                    className="h-full w-auto object-contain max-w-[180px]"
-                  />
-                </Link>
+              {/* Trustmore logo clickable - Positioned slightly higher and larger */}
+              <div className="relative">
+                <div className="relative -top-1">
+                  <Link href="/">
+                    <img
+                      src="/ft01.png"
+                      alt="Trustmore Logo"
+                      className="h-12 w-auto object-contain max-w-[180px]"
+                    />
+                  </Link>
+                </div>
               </div>
 
               {/* Golden logo - non-clickable */}
@@ -44,7 +46,7 @@ export default function Footer() {
                 Where Generations Prosper. Where Legacies Endure. Exclusively
                 Curated for the World's Most Discerning Families.
                 <br />
-                [Powered by Trustmore Group – 25 Years of Heritage]
+                Powered by Trustmore Group – 25 Years of Heritage
               </p>
             </div>
 
@@ -163,7 +165,7 @@ export default function Footer() {
           </div>
 
           {/* Helpful Links Section (Now in second position) */}
-          <div className="md:ml-4">
+          <div className="md:ml-8">
             <h3 className="text-base font-bold text-gray-900 mb-2">
               Helpful Links
             </h3>
@@ -191,7 +193,7 @@ export default function Footer() {
                     href={href}
                     className={`font-medium text-sm ${
                       pathname === href ? "text-black" : "text-gray-700"
-                    }`}
+                    } whitespace-nowrap`}
                   >
                     {label}
                   </Link>
@@ -200,8 +202,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Quick Links Section (First Half) */}
-          <div className="md:ml-4">
+          {/* Quick Links Section (First Half) - Added ml-4 for more spacing */}
+          <div className="md:ml-20">
             <h3 className="text-base font-bold text-gray-900 mb-2">
               Quick Links
             </h3>

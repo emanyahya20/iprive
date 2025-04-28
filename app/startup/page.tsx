@@ -166,8 +166,8 @@ export default function StartupVentureCapitalAdvisory() {
           </h2>
           <p className="text-lg sm:text-xl text-gray-700">
             Whether you're a seasoned private investor, a forward-thinking board
-            member, or a family office visionary, IPRIVE Global Private Wealth
-            ensures you're not just participating in the future —{" "}
+            member, or a family office visionary, IPRIVE Global ensures you're
+            not just participating in the future —{" "}
             <span className="font-semibold">you're shaping it</span>.
           </p>
           <div className="mt-8">
