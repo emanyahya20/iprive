@@ -12,10 +12,10 @@ export default function ContactUs() {
       details: [
         "Ground Floor, 7A, Standard Chartered Tower",
         "DLF Cyber City, DLF Phase 2, Sector 24",
-        "Gurugram, Haryana 122001",
+        "Gurugram, Haryana 122002", // Updated PIN code (122002 instead of 122001)
       ],
       mapUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.942780899109!2d77.09392331507731!3d28.49624808250033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f8b13f1e0a5%3A0x9d3b6e5b6e5b6e5b!2sStandard%20Chartered%20Tower%2C%20DLF%20Cyber%20City%2C%20DLF%20Phase%202%2C%20Sector%2024%2C%20Gurugram%2C%20Haryana%20122001!5e0!3m2!1sen!2sin",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.913734778655!2d77.0921499!3d28.4926273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19376c004255%3A0x5718a2db0edc99d7!2sDLF%20Building%20No.%207A%2C%20DLF%20Cyber%20City%2C%20DLF%20Phase%202%2C%20Sector%2024%2C%20Gurugram%2C%20Haryana%20122002%2C%20India!5e0!3m2!1sen!2sin!4v1714480000000!5m2!1sen!2sin",
       phone: "+919810336644",
       email: "care@itrustmore.com",
     },
