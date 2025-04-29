@@ -173,7 +173,10 @@ export default function Footer() {
               {[
                 { href: "/global", label: "Global Real Estate Advisory" },
                 { href: "/private", label: "High-Value Private Investments" },
-                { href: "/trust", label: "Trust Formation & Legacy Planning" },
+                {
+                  href: "/trust",
+                  label: "Trust Formation & Executive Protection",
+                },
                 {
                   href: "/startup",
                   label: "Startup & Venture Capital Investments",
@@ -246,16 +249,7 @@ export default function Footer() {
                   ESCROWPAY
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://www.iprivewealth.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-black text-sm"
-                >
-                  IPRIVEWEALTH
-                </a>
-              </li>
+
               <li>
                 <a
                   href="https://www.luxejoys.com"

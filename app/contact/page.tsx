@@ -30,7 +30,7 @@ export default function ContactUs() {
       ],
       mapUrl:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.8673777212776!2d55.2819124!3d25.2178236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4292f9132cbd%3A0x653a96f2ced0a490!2sJumeirah%20Emirates%20Towers!5e0!3m2!1sen!2sae!4v1711162000000!5m2!1sen!2sae",
-      phone: "+919810336644",
+
       email: "care@itrustmore.com",
     },
   ];
@@ -55,9 +55,8 @@ export default function ContactUs() {
             <div className="w-full max-w-4xl mx-auto lg:mx-0">
               <div className="text-center lg:text-left px-2 sm:px-0">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mb-3 sm:mb-4 leading-tight [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-                  <span className="block">Get in Touch with IPRIVE</span>
-                  <span className="block text-2xl sm:text-3xl md:text-4xl font-medium mt-3 sm:mt-4 text-white [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]">
-                    Your Trusted Payment Partner
+                  <span className="block">
+                    Get in Touch with IPRIVE Global Private Wealth
                   </span>
                 </h1>
               </div>

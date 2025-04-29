@@ -85,7 +85,7 @@ export default function ServicesTabs() {
             <circle cx="12" cy="7" r="4" />
           </svg>
         ),
-        title: "Trust Formation",
+        title: "Trust Formation & Executive Protection",
         description:
           "Preserve and protect your wealth for generations with our expert trust structures, estate planning services, and family office solutions. Confidential, compliant, and crafted with absolute care for your family's future.",
         path: "/trust",
@@ -236,7 +236,7 @@ export default function ServicesTabs() {
             <circle cx="12" cy="7" r="4" />
           </svg>
         ),
-        title: "Trust Formation & Legacy Planning",
+        title: "Trust Formation & Executive Protection",
         description:
           "Preserve and protect your wealth for generations with our expert trust structures, estate planning services, and family office solutions. Confidential, compliant, and crafted with absolute care for your family's future.",
         path: "/trust",
